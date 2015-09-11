@@ -4,8 +4,30 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#composer-lock-the-lock-file",
         "This file is @generated automatically"
     ],
-    "hash": "9897ac47a5dd82c036f99945f75cb084",
+    "hash": "1b7e4db039ff5b359234d57e0a4b5eaa",
     "packages": [
+        {
+            "name": "advanced-custom-fields/advanced-custom-fields-gallery",
+            "version": "5.0",
+            "dist": {
+                "type": "zip",
+                "url": "http://download.advancedcustomfields.com/GF72-8ME6-JS15-3PZC/trunk/",
+                "reference": null,
+                "shasum": null
+            },
+            "type": "wordpress-plugin"
+        },
+        {
+            "name": "advanced-custom-fields/advanced-custom-fields-pro",
+            "version": "5.0",
+            "dist": {
+                "type": "zip",
+                "url": "http://connect.advancedcustomfields.com/index.php?p=pro&a=download&k=b3JkZXJfaWQ9NTU1Nzl8dHlwZT1kZXZlbG9wZXJ8ZGF0ZT0yMDE1LTA1LTA3IDAyOjExOjA2",
+                "reference": null,
+                "shasum": null
+            },
+            "type": "wordpress-plugin"
+        },
         {
             "name": "composer/installers",
             "version": "v1.0.21",
@@ -100,6 +122,17 @@
                 "zikula"
             ],
             "time": "2015-02-18 17:17:01"
+        },
+        {
+            "name": "gravity-forms/gravity-forms",
+            "version": "1.9.5",
+            "dist": {
+                "type": "zip",
+                "url": "http://tinbot.com.au/packages/gravityforms_1.9.5.zip",
+                "reference": null,
+                "shasum": null
+            },
+            "type": "wordpress-plugin"
         },
         {
             "name": "johnpbloch/wordpress",

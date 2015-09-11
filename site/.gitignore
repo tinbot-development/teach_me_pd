@@ -9,10 +9,12 @@ web/app/uploads/*
 !web/app/mu-plugins/disallow-indexing.php
 !web/app/mu-plugins/register-theme-directory.php
 !web/app/mu-plugins/bedrock-autoloader.php
+!web/app/themes
 
 # WordPress
+!web/wp-config.php
 web/wp
-web/.htaccess
+!web/.htaccess
 
 # WP-CLI
 db-sync
@@ -33,3 +35,7 @@ node_modules
 # Vagrant
 bin
 .vagrant
+
+# Other
+.DS_Store
+.idea

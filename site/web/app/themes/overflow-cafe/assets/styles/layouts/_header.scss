@@ -1,0 +1,259 @@
+/*Header Top*/
+section.top-header {
+    /*Coming Events*/
+    a.events-widget {
+        width: 328px;
+        span{
+            border-bottom: 1px solid rgba(228,228,228,.69);
+            box-shadow: 0 .2px 0 rgba(0,0,0,.45);
+            display: block;
+            margin-bottom: 15px;
+            h2 {
+                color: #514c3f;
+                display: inline-block;
+                margin-bottom: 0;
+                text-shadow: 1px 1px 1px rgba(255, 255, 255, 0.6);
+            }
+            p {
+                color: #ffffff;
+                font-size: 16px;
+                font-weight: bold;
+                display: inline-block;
+                margin:0 0 0 3em;
+            }
+        }
+        img{
+
+        }
+    }
+
+    /*Contact Information*/
+    address.contact-info {
+        color: #514c3f;
+        font-size: 20px;
+        line-height: 28px;
+        width: 421px;
+        .business-name {
+            margin-bottom: 5px;
+            display: block;
+            h2{
+              border-bottom: 1px solid rgba(228, 228, 228, 0.69);
+              box-shadow: 0 .2px 0 rgba(0, 0, 0, 0.45);
+              color: #514c3f;
+              font-size: 34px;
+              float: left;
+              text-shadow: 1px 1px 1px rgba(255, 255, 255, 0.6);
+            }
+            img.ampersand {
+              float: left;
+              margin: 17px 7px 0;
+            }
+        }
+
+        span{
+          text-shadow: 1px 1px 1px rgba(255, 255, 255, 0.6);
+        }
+    }
+    a.btn.btn-warning.btn-sm {
+      clear: left;
+      float: left;
+      font-weight: bold;
+      margin-top: 10px;
+    }
+    aside.telephone {
+        float: right;
+        font-size: 27px;
+        font-weight: bold;
+        color: #514c3f;
+        margin-top: 16px;
+        text-shadow: 1px 1px 1px rgba(255, 255, 255, 0.6);
+        span.glyphicon.glyphicon-earphone {
+            margin-right: 10px;
+        }
+        a {
+            color: #514c3f;
+            display: inline-block;
+            float: right;
+            text-shadow: 1px 1px #c6c4bd;
+        }
+    }
+}
+
+/*Header*/
+header {
+    .navbar-default {
+        .navbar-brand {
+          font-family: 'League Gothic', Arial, Helvetica, sans-serif;
+          text-transform: uppercase;
+          font-size: 27px;
+        }
+        .navbar-nav{
+            >li {
+                  >a{
+                      color: #FFFFFF;
+                      font-family: $font-family-sans-serif;
+                      font-size: 27px;
+                      text-transform: uppercase;
+                  }
+
+                  //Logo
+                  &.home-menu.logo{
+                      a {
+
+                      }
+                  }
+              }
+        }
+    }
+    /* Laptops and Tablets */
+    @media screen
+    and (max-width: $screen-md-max)
+    and (min-width: $screen-sm-min){
+      .navbar-default {
+        .navbar-nav {
+          > li {
+            > a {
+                font-size: 22px;
+            }
+          }
+        }
+      }
+
+      //Logo SM
+      .logo-sm {
+          a {
+              background: url(../images/logo.jpg) no-repeat center center;
+              background-size: contain;
+              border: none;
+              display: inline-block;
+              height: 137px;
+              width: 145px;
+              text-indent: -99999px;
+          }
+      }
+    }
+
+    /*  Medium Desktop Up */
+    @media screen
+    and (min-width: $grid-float-breakpoint) {
+
+      /*Header Top*/
+      section.top-header {
+          address.contact-info {
+
+          }
+      }
+
+      /* Non-Mobile Navigation */
+      .navbar-default {
+        background: transparent;
+        border: none;
+        clear: left;
+        .ribbon{
+          background: url("../images/bg/nav-bg.jpg") repeat-x;
+        }
+        .navbar-nav {
+          height: 50px;
+          > li {
+            margin: 14px 0;
+            border-left: 1px solid #74716e;
+            > a {
+              padding-top: 2px;
+              padding-bottom: 2px;
+
+            }
+            &.no-border {
+                border: none;
+            }
+            //Logo
+            &.home-menu.logo {
+              a {
+                background: url("../images/logo.jpg") no-repeat center center;
+                border: none;
+                height: 186px;
+                width: 194px;
+                margin-top: -2.5em;
+                text-indent: -99999px;
+              }
+            }
+          }
+        }
+      }
+    }
+  /*  Large Desktop Up */
+  @media screen
+  and (min-width: $screen-lg-min) {
+    .navbar-default {
+      .navbar-nav {
+        > li {
+          > a {
+            margin: 0 7px;
+          }
+        }
+      }
+    }
+  }
+
+
+  /*Mobile Styles*/
+  @media screen
+  and (max-device-width: $screen-md-max) {
+      //Logo SM
+      .logo-sm {
+          a {
+              background: url(../images/logo.jpg) no-repeat center center;
+              background-size: contain;
+              border: none;
+              display: inline-block;
+              height: 137px;
+              width: 145px;
+              text-indent: -99999px;
+          }
+      }
+      section.top-header {
+          address.contact-info {
+              margin-top: 20px;
+              padding-left: 15px;
+              padding-right: 15px;
+              text-align: center;
+              width: 100%;
+              aside.telephone {
+                float: none;
+                margin: 10px auto;
+                display: inline-block;
+                width: 193px;
+              }
+
+              a.btn {
+                width: 100%;
+              }
+          }
+          a.events-widget {
+              width: 328px;
+              display: block;
+              margin: 20px auto;
+              span {
+                  box-shadow: none;
+              }
+          }
+      }
+  }
+
+  @media screen
+  and (max-width: $screen-xs) {
+      section.top-header {
+          a.events-widget {
+              padding: 0 15px;
+              width: 100%;
+          }
+      }
+  }
+
+
+}
+
+
+
+
+
+

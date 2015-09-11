@@ -1,0 +1,63 @@
+body.page.home{
+    div.wrap{
+        .content {
+            main.main{
+                .page-header {
+                    @extend  .gradient-brown;
+                    box-shadow: 0 0 3px rgba(109,109,109,.6);
+                    margin: 0;
+                    float: left;
+                    padding: 0 0 0 30px;
+                    width: 100%;
+                    border: 1px solid #C7C2B6;
+                    border-bottom: 0;
+                    border-top-left-radius: 3px;
+                    border-top-right-radius: 3px;
+
+                    h1 {
+                      color: #ffffff;
+                      font-weight: normal;
+                      margin: 15px;
+                      &:before,
+                      &:after{
+                        content: '"';
+                        font-style: italic;
+                      }
+                    }
+                }
+
+              .slider-content-container{
+                  background-color: #fff;
+                  border: 1px solid #79756b;
+                  border-top: 0;
+                  box-shadow: 0 0 3px rgba(109,109,109,.6);
+                  float: left;
+                  padding: 30px 20px;
+                  width: 100%;
+              }
+            }
+        }
+        @media screen
+        and (min-width: $screen-md)
+        {
+            .soliloquy-container .soliloquy-image{
+                height: 100%;
+            }
+        }
+        /*Mobile Styles*/
+        @media screen
+        and (max-width: $screen-sm-max)
+        {
+            .content{
+                main.main{
+                   .page-header {
+                       padding: 0;
+                       h1 {
+                          font-size: 18px;
+                       }
+                   }
+                 }
+            }
+        }
+    }
+}

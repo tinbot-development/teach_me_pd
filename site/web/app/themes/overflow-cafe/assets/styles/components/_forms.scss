@@ -1,0 +1,20 @@
+/*
+Gravity Forms*/
+.gform_wrapper {
+    form {
+      input.large,
+      select.large,
+      input.large,
+      select.large,
+      .textarea.large {
+        width: 100% !important;
+      }
+      .gform_button.button {
+          @extend .btn;
+          @extend .btn-primary;
+          @extend .col-md-4;
+          @extend .col-xs-12;
+      }
+    }
+}
+

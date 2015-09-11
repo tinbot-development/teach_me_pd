@@ -72,3 +72,14 @@ Keep track of development and community news.
 * Follow [@rootswp on Twitter](https://twitter.com/rootswp)
 * Read and subscribe to the [Roots Blog](https://roots.io/blog/)
 * Subscribe to the [Roots Newsletter](https://roots.io/subscribe/)
+
+
+# Platform-B Setup steps:
+1. Do above Installaion instructions.
+2. Run "Composer Install" inside the bedrock directory to download all dependencies WP and Plugins
+3. Change directory to web/app/themes/ folder then clone Sage Theme: git clone https://github.com/roots/sage.git theme-name
+4. Run "npm install" and "Bower install" inside the Sage Theme Folder.
+5. Run "Gulp"
+6. Setup Database and Run WP install.
+
+Setup SSH Keys on Digital Ocean Server: https://www.digitalocean.com/community/tutorials/how-to-set-up-ssh-keys--2
