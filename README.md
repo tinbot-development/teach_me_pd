@@ -79,3 +79,65 @@ $ npm install
 $ bower install
 $ gulp
 ```
+
+#
+
+
+# Platform-B Setup steps:
+
+## I. Clone this repository.
+## II. Configure Trellis:
+1. Make sure you have the [requirements](https://github.com/roots/trellis#requirements) all installed
+2. Install the Ansible Galaxy roles: `$ cd ansible && ansible-galaxy install -r requirements.yml`
+3. Configure ansible/group_vars/all:
+	a. Add your SSH Keys:
+
+```
+		users:
+	  - name: "{{ web_user }}"
+	    groups:
+	      - "{{ web_group }}"
+	    keys:
+	      - "{{ lookup('file', '~/.ssh/id_rsa.pub') }}"
+	      - https://github.com/okimangelo.keys
+	  - name: "{{ admin_user }}"
+	    groups:
+	      - sudo
+	    keys:
+	      - "{{ lookup('file', '~/.ssh/id_rsa.pub') }}"
+	      - https://github.com/okimangelo.keys      
+```
+
+4. Configure ansible/group_vars/development:
+```
+	wordpress_sites:
+	  overflow-cafe.dev:
+	    site_hosts:
+	      - overflow-cafe.dev
+	    local_path: ../site # path targeting local Bedrock site directory (relative to Ansible root)
+	    repo: git@github.com:tinbot-development/overflowcafe.git
+	    site_install: true
+	    site_title: Overflow Cafe
+	    db_import: ../site/db/Dump20150909.sql
+	    admin_user: admin
+	    admin_password: admin
+	    admin_email: admin@overflow-cafe.dev
+	    multisite:
+	      enabled: false
+	      subdomains: false
+	    ssl:
+	      enabled: false
+	    cache:
+	      enabled: false
+	      duration: 30s
+	    system_cron: true
+	    env:
+	      wp_home: http://overflow-cafe.dev
+	      wp_siteurl: http://overflow-cafe.dev/wp
+	      wp_env: development
+	      db_name: overflowcafe
+	      db_user: overflowcafe
+	      db_password: overflowcafe
+```
+
+4. Run "Run Vagrant up"
