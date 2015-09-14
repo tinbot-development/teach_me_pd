@@ -1,7 +1,7 @@
 # Application
+!web/app/themes/teach_me_pd_theme/*
 web/app/plugins/*
 !web/app/plugins/.gitkeep
-!web/app/themes/teach_me_pd_theme/*
 web/app/mu-plugins/*
 !web/app/mu-plugins/.gitkeep
 web/app/upgrade
