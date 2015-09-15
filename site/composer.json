@@ -30,13 +30,53 @@
     {
       "type": "composer",
       "url": "http://wpackagist.org"
+    },
+    {
+      "type": "package",
+      "package": {
+        "name": "advanced-custom-fields/advanced-custom-fields-pro",
+        "version": "5.0",
+        "type": "wordpress-plugin",
+        "dist": {
+          "type": "zip",
+          "url": "http://connect.advancedcustomfields.com/index.php?p=pro&a=download&k=b3JkZXJfaWQ9NTU1Nzl8dHlwZT1kZXZlbG9wZXJ8ZGF0ZT0yMDE1LTA1LTA3IDAyOjExOjA2"
+        }
+      }
+    },
+    {
+      "type": "package",
+      "package": {
+        "name": "advanced-custom-fields/advanced-custom-fields-gallery",
+        "version": "5.0",
+        "type": "wordpress-plugin",
+        "dist": {
+          "type": "zip",
+          "url": "http://download.advancedcustomfields.com/GF72-8ME6-JS15-3PZC/trunk/"
+        }
+      }
+    },
+    {
+      "type": "package",
+      "package": {
+        "name": "gravity-forms/gravity-forms",
+        "version": "1.9.5",
+        "type": "wordpress-plugin",
+        "dist": {
+          "type": "zip",
+          "url": "http://tinbot.com.au/packages/gravityforms_1.9.5.zip"
+        }
+      }
     }
+
   ],
   "require": {
-    "php": ">=5.5",
+    "php": ">=5.4",
     "composer/installers": "~1.0.12",
     "vlucas/phpdotenv": "^2.0.1",
-    "johnpbloch/wordpress": "4.3"
+    "johnpbloch/wordpress": "4.3",
+    "advanced-custom-fields/advanced-custom-fields-pro": "5.0",
+    "advanced-custom-fields/advanced-custom-fields-gallery": "5.0",
+    "gravity-forms/gravity-forms" : "1.9.5"
   },
   "extra": {
     "installer-paths": {

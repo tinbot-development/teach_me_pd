@@ -15,9 +15,11 @@ $sage_includes = [
   'lib/wrapper.php',               // Theme wrapper class
   'lib/conditional-tag-check.php', // ConditionalTagCheck class
   'lib/config.php',                // Configuration
+  'lib/wp_bootstrap_navwalker.php',                    // Bootstrap Nav
   'lib/assets.php',                // Scripts and stylesheets
   'lib/titles.php',                // Page titles
   'lib/extras.php',                // Custom functions
+  'lib/jquery-plugins.php',               // Custom jQUery Plugins
 ];
 
 foreach ($sage_includes as $file) {

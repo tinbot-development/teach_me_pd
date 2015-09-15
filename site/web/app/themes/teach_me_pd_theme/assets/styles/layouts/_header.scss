@@ -1,0 +1,36 @@
+header.banner {
+    border-top: 7px solid $brand-success;
+    border-bottom: 7px solid $brand-primary-dark;
+
+    a.brand {
+        background: url(../images/logo.png) no-repeat center center;
+        display: block;
+        height: 224px;
+        width: 224px;
+        margin: 20px 15px;
+        text-indent: -99999px;
+    }
+
+    h1.site-description {
+      color: $brand-primary-dark;
+      font-size: 15px;
+      font-weight: 700;
+    }
+}
+
+
+@media screen
+and (min-width: $screen-md){
+    header.banner {
+        height: 190px;
+        a.brand {
+            margin-top: -1em;
+        }
+
+        h1.site-description {
+            float: right;
+            margin-bottom: 20px;
+        }
+    }
+
+}
