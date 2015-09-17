@@ -21,7 +21,14 @@
 
   </div>
 </header>
-<aside class="event-search-bar clearfix bg-success">
-  <!-- Tribe Bar -->
-  <?php tribe_get_template_part( 'modules/bar' ); ?>
-</aside>
+<section class="header-search-bar clearfix bg-success">
+  <div class="container">
+    <div class="row">
+      <aside class="event-search-bar col-md-9 pull-right-md">
+        <!-- Tribe Bar -->
+        <?php tribe_get_template_part( 'modules/bar' ); ?>
+      </aside>
+    </div>
+  </div>
+</section>
+

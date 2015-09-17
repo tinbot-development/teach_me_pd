@@ -17,6 +17,33 @@ header.banner {
       font-weight: 700;
     }
 }
+/* Header Search Bar */
+.header-search-bar{
+    .event-search-bar{
+        margin-top: 19px;
+        .search-label{
+            font-size: 25px;
+            font-weight: 500;
+            margin-right: 10px;
+        }
+        .input-container{
+            margin: 6px;
+            .sbHolder {
+
+                    .sbSelector:link,
+                    .sbSelector:visited,
+                    .sbSelector:hover {
+
+                    }
+            }
+        }
+        .icon-search {
+            margin-left: 10px;
+        }
+    }
+}
+
+
 
 
 @media screen
@@ -32,5 +59,22 @@ and (min-width: $screen-md){
             margin-bottom: 20px;
         }
     }
+    /* Header Search Bar  */
+    .header-search-bar{
+      #tribe-events-bar {
+          float: right;
+      }
+      .event-search-bar{
+        .search-label{
+          float: left;
+        }
+        .input-container{
+          float: left;
+          margin-left: 3px;
+          width: 196px;
+        }
+      }
+    }
+
 
 }

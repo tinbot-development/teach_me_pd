@@ -26,31 +26,29 @@ $current_url = tribe_events_get_current_filter_url();
 
 		<!-- Mobile Filters Toggle -->
 
-		<div id="tribe-bar-collapse-toggle" <?php if ( count( $views ) == 1 ) { ?> class="tribe-bar-collapse-toggle-full-width"<?php } ?>>
-        Search <span class="tribe-bar-toggle-arrow"></span>
-		</div>
-    <div class="col-md-7">
-        <div class="row">
-            <div class="input-container col-md-3">
-              <select name="category" id="category" class="select-box-default">
-                <option selected>Category</option>
-                <option value="category-one">Category One</option>
-              </select>
-            </div>
-
-            <div class="input-container col-md-3">
-              <input type="text" class="search keyword" name="search" placeholder="Keyword"/>
-            </div>
+		<span class="search-label">Search</span>
 
 
-            <div class="input-container col-md-3">
-              <select name="state" id="state" class="state select-box-default">
-                <option selected>State</option>
-                <option value="Melbourne">Melbourne</option>
-              </select>
-            </div>
-        </div>
+    <div class="input-container">
+      <select name="category" id="category" class="select-box-default">
+        <option selected>Category</option>
+        <option value="category-one">Category One</option>
+      </select>
     </div>
+
+    <div class="input-container">
+      <input type="text" class="search keyword text-input" name="search" placeholder="Keyword"/>
+    </div>
+
+
+    <div class="input-container">
+      <select name="state" id="state" class="state select-box-default">
+        <option selected>State</option>
+        <option value="Melbourne">Melbourne</option>
+      </select>
+    </div>
+
+
 
     <input type="submit" class="icon-search"/>
 	</form>

@@ -1,8 +1,17 @@
 //Background Colors
-.bg-primary {background-color: $brand-primary; * { color: $white;}}
+.bg-primary {background-color: $brand-primary; * { color: $white;} }
 .bg-warning {background-color: $brand-warning; * { color: $white;}}
-.bg-success {background-color: $brand-success; * { color: $white;}}
-.bg-danger {background-color: $brand-danger;* { color: $white;}}
+.bg-success {background-color: $brand-success; * { color: $white;} a:hover, a:active, a:visited{ color: $white; }}
+.bg-danger {background-color: $brand-danger; * { color: $white;}}
+.bg-gray-light {background-color: $gray-light; * { color: $white;}}
+.bg-gray-dark {background-color: $gray-dark; * { color: $white;}}
+
+
+//Borders
+.img-border-lg {
+    background-color: $white;
+    border: 6px solid $white;
+}
 
 
 @media screen and

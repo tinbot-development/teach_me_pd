@@ -17,6 +17,9 @@ use Roots\Sage\Wrapper;
     <?php
       do_action('get_header');
       get_template_part('templates/header');
+      if(is_front_page()) get_template_part('templates/home/front-page','banner');
+
+      pb_before_content_wrap(); //Add Hook pb_before_content_wrap
     ?>
     <div class="wrap container" role="document">
       <div class="content row">
@@ -31,6 +34,7 @@ use Roots\Sage\Wrapper;
       </div><!-- /.content -->
     </div><!-- /.wrap -->
     <?php
+      do_action('pb_before_footer');
       do_action('get_footer');
       get_template_part('templates/footer');
       wp_footer();

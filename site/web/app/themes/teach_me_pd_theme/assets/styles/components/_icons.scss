@@ -1,0 +1,34 @@
+.icon-circle {
+      border-radius: 50%;
+      > * {
+          margin: 0;
+          width: 100%;
+          text-align: center;
+      }
+}
+
+
+ul.social-media-icons {
+    > li {
+        display: inline-block;
+        list-style: none;
+        a {
+            background-image: url("../images/icons/social-media.png");
+            background-repeat: no-repeat;
+            display: block;
+            height: 42px;
+            width: 42px;
+            text-indent: -99999px;
+
+            &.facebook {
+                background-position: left center;
+            }
+            &.twitter {
+              background-position: center center;
+            }
+            &.linkedin {
+              background-position: right center;
+            }
+        }
+    }
+}

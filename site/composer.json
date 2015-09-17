@@ -58,6 +58,42 @@
     {
       "type": "package",
       "package": {
+        "name": "events-calendar/events-calendar-pro",
+        "version": "3.12.0",
+        "type": "wordpress-plugin",
+        "dist": {
+          "type": "zip",
+          "url": "http://tinbot.com.au/packages/events-calendar-pro.3.12.0.zip"
+        }
+      }
+    },
+    {
+      "type": "package",
+      "package": {
+        "name": "the-events-calendar-community-events/the-events-calendar-community-events",
+        "version": "3.12.0",
+        "type": "wordpress-plugin",
+        "dist": {
+          "type": "zip",
+          "url": "http://tinbot.com.au/packages/the-events-calendar-community-events.3.12.0.zip"
+        }
+      }
+    },
+    {
+      "type": "package",
+      "package": {
+        "name": "wootickets/wootickets",
+        "version": "3.12.0",
+        "type": "wordpress-plugin",
+        "dist": {
+          "type": "zip",
+          "url": "http://tinbot.com.au/packages/wootickets.3.12.0.zip"
+        }
+      }
+    },
+    {
+      "type": "package",
+      "package": {
         "name": "gravity-forms/gravity-forms",
         "version": "1.9.5",
         "type": "wordpress-plugin",
@@ -76,6 +112,12 @@
     "johnpbloch/wordpress": "4.3",
     "advanced-custom-fields/advanced-custom-fields-pro": "5.0",
     "advanced-custom-fields/advanced-custom-fields-gallery": "5.0",
+    "wpackagist-plugin/the-events-calendar": "3.12.1",
+    "wpackagist-plugin/duplicate-tec-event": "1.5",
+    "events-calendar/events-calendar-pro": "3.12.0",
+    "the-events-calendar-community-events/the-events-calendar-community-events": "3.12.0",
+    "wpackagist-plugin/woocommerce": "2.4.6",
+    "wootickets/wootickets" : "3.12.0",
     "gravity-forms/gravity-forms" : "1.9.5"
   },
   "extra": {

@@ -139,9 +139,6 @@
 				}
 			});
 			sbToggle.appendTo(sbHolder);
-            /* Modify JS to add Font Awesome Icons */
-            sbIcon = $("<i class='fa fa-chevron-down circle arrow'></i>");
-            sbIcon.appendTo(sbToggle);
 
 			sbOptions = $("<ul>", {
 				"id": "sbOptions_" + inst.uid,
@@ -406,7 +403,7 @@
 				viewportHeight = parseInt($(window).height(), 10),
 				offset = $("#sbHolder_" + inst.uid).offset(),
 				scrollTop = $(window).scrollTop(),
-                    height = el.prev().height(),
+				height = el.prev().height(),
 				diff = viewportHeight - (offset.top - scrollTop) - height / 2,
 				onOpen = this._get(inst, 'onOpen');
 			el.css({

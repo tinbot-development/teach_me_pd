@@ -2,3 +2,20 @@
 
 
 
+.text-sm {
+    font-size: $font-size-small;
+}
+
+ul.link-with-separator {
+    li {
+        border-right: 1px solid;
+        display:inline;
+        list-style-type: none;
+        a {
+            margin: 0 14px;
+        }
+        &:last-child {
+            border: none;
+        }
+    }
+}

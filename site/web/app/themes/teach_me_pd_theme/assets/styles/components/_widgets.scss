@@ -1,0 +1,70 @@
+/*Upcoming Events Widget*/
+.upcoming-events-widget{
+      background-color: $gray-dark;
+      padding: 36px;
+      > h3 {
+          font-weight: 500;
+          margin: 0 0 1.5em 0;
+      }
+      ul.list-upcoming-events{
+          >li {
+              border-bottom: 1px solid;
+              display: block;
+              margin-top: 11px;
+              padding-bottom: 13px;
+              span.date {
+                  border-radius: 50%;
+                  display: block;
+                  float: left;
+                  margin-right: 1.45em;
+                  width: 53px;
+                  height: 53px;
+                  padding: 7px 0;
+              }
+              .event-content {
+                  .event-title {
+                      font-weight: 700;
+                      line-height: 2em;
+                      margin-bottom: 0;
+                      text-transform: uppercase;
+                  }
+                  .provider {
+                      font-weight: 400;
+                      text-transform: capitalize;
+                      .more-link {
+                          float: right;
+                          text-decoration: underline;
+                      }
+                  }
+              }
+          }
+          &.brand-success{
+            >li {
+              span.icon-circle {
+                  background-color: $brand-success;
+              }
+              .event-content {
+                  .provider {
+                      .more-link {
+                          &:hover {
+                              color: $brand-success;
+                          }
+                      }
+                  }
+              }
+            }
+          }
+      }
+}
+
+
+/* Bottom Latest News Section*/
+
+.bottom-latest-news {
+      .latest-news {
+          padding: 28px;
+          img.img-responsive {
+              width: 100%;
+          }
+      }
+}

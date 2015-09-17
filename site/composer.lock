@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#composer-lock-the-lock-file",
         "This file is @generated automatically"
     ],
-    "hash": "503eadfcb6ef0843dce524652b64090c",
+    "hash": "6ec04e1ef4e420471cc0635e39ee4685",
     "packages": [
         {
             "name": "advanced-custom-fields/advanced-custom-fields-gallery",
@@ -124,6 +124,17 @@
             "time": "2015-02-18 17:17:01"
         },
         {
+            "name": "events-calendar/events-calendar-pro",
+            "version": "3.12.0",
+            "dist": {
+                "type": "zip",
+                "url": "http://tinbot.com.au/packages/events-calendar-pro.3.12.0.zip",
+                "reference": null,
+                "shasum": null
+            },
+            "type": "wordpress-plugin"
+        },
+        {
             "name": "gravity-forms/gravity-forms",
             "version": "1.9.5",
             "dist": {
@@ -220,6 +231,17 @@
             "time": "2015-06-11 15:15:30"
         },
         {
+            "name": "the-events-calendar-community-events/the-events-calendar-community-events",
+            "version": "3.12.0",
+            "dist": {
+                "type": "zip",
+                "url": "http://tinbot.com.au/packages/the-events-calendar-community-events.3.12.0.zip",
+                "reference": null,
+                "shasum": null
+            },
+            "type": "wordpress-plugin"
+        },
+        {
             "name": "vlucas/phpdotenv",
             "version": "v2.0.1",
             "source": {
@@ -264,6 +286,77 @@
                 "environment"
             ],
             "time": "2015-05-30 16:15:01"
+        },
+        {
+            "name": "wootickets/wootickets",
+            "version": "3.12.0",
+            "dist": {
+                "type": "zip",
+                "url": "http://tinbot.com.au/packages/wootickets.3.12.0.zip",
+                "reference": null,
+                "shasum": null
+            },
+            "type": "wordpress-plugin"
+        },
+        {
+            "name": "wpackagist-plugin/duplicate-tec-event",
+            "version": "1.5",
+            "source": {
+                "type": "svn",
+                "url": "http://plugins.svn.wordpress.org/duplicate-tec-event/",
+                "reference": "trunk"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://downloads.wordpress.org/plugin/duplicate-tec-event.zip",
+                "reference": null,
+                "shasum": null
+            },
+            "require": {
+                "composer/installers": "~1.0"
+            },
+            "type": "wordpress-plugin",
+            "homepage": "https://wordpress.org/plugins/duplicate-tec-event/"
+        },
+        {
+            "name": "wpackagist-plugin/the-events-calendar",
+            "version": "3.12.1",
+            "source": {
+                "type": "svn",
+                "url": "http://plugins.svn.wordpress.org/the-events-calendar/",
+                "reference": "tags/3.12.1"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://downloads.wordpress.org/plugin/the-events-calendar.3.12.1.zip",
+                "reference": null,
+                "shasum": null
+            },
+            "require": {
+                "composer/installers": "~1.0"
+            },
+            "type": "wordpress-plugin",
+            "homepage": "https://wordpress.org/plugins/the-events-calendar/"
+        },
+        {
+            "name": "wpackagist-plugin/woocommerce",
+            "version": "2.4.6",
+            "source": {
+                "type": "svn",
+                "url": "http://plugins.svn.wordpress.org/woocommerce/",
+                "reference": "tags/2.4.6"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://downloads.wordpress.org/plugin/woocommerce.2.4.6.zip",
+                "reference": null,
+                "shasum": null
+            },
+            "require": {
+                "composer/installers": "~1.0"
+            },
+            "type": "wordpress-plugin",
+            "homepage": "https://wordpress.org/plugins/woocommerce/"
         }
     ],
     "packages-dev": [],
