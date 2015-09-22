@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#composer-lock-the-lock-file",
         "This file is @generated automatically"
     ],
-    "hash": "6ec04e1ef4e420471cc0635e39ee4685",
+    "hash": "fc94bd79df8aa3ffc6a6d37919070e28",
     "packages": [
         {
             "name": "advanced-custom-fields/advanced-custom-fields-gallery",
@@ -319,6 +319,26 @@
             "homepage": "https://wordpress.org/plugins/duplicate-tec-event/"
         },
         {
+            "name": "wpackagist-plugin/members",
+            "version": "1.0.2",
+            "source": {
+                "type": "svn",
+                "url": "http://plugins.svn.wordpress.org/members/",
+                "reference": "tags/1.0.2"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://downloads.wordpress.org/plugin/members.1.0.2.zip",
+                "reference": null,
+                "shasum": null
+            },
+            "require": {
+                "composer/installers": "~1.0"
+            },
+            "type": "wordpress-plugin",
+            "homepage": "https://wordpress.org/plugins/members/"
+        },
+        {
             "name": "wpackagist-plugin/the-events-calendar",
             "version": "3.12.1",
             "source": {
@@ -357,6 +377,26 @@
             },
             "type": "wordpress-plugin",
             "homepage": "https://wordpress.org/plugins/woocommerce/"
+        },
+        {
+            "name": "wpackagist-plugin/wp-members",
+            "version": "3.0.4",
+            "source": {
+                "type": "svn",
+                "url": "http://plugins.svn.wordpress.org/wp-members/",
+                "reference": "trunk"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://downloads.wordpress.org/plugin/wp-members.zip",
+                "reference": null,
+                "shasum": null
+            },
+            "require": {
+                "composer/installers": "~1.0"
+            },
+            "type": "wordpress-plugin",
+            "homepage": "https://wordpress.org/plugins/wp-members/"
         }
     ],
     "packages-dev": [],

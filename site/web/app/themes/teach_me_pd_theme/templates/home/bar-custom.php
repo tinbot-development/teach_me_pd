@@ -11,18 +11,10 @@
  */
 ?>
 
-<?php
 
-$filters = tribe_events_get_filters();
-$views   = tribe_events_get_views();
+<div id="tribe-events-bar-custom">
 
-$current_url = tribe_events_get_current_filter_url();
-?>
-
-<?php do_action( 'tribe_events_bar_before_template' ) ?>
-<div id="tribe-events-bar">
-
-	<form id="tribe-bar-form" class="tribe-clearfix text" name="tribe-bar-form" method="post" action="<?php echo esc_attr( $current_url ); ?>">
+	<form id="tribe-bar-form-custom" class="tribe-clearfix text" name="tribe-bar-form-custom" method="post" action="<?php echo get_bloginfo('url')?>/courses-grid/">
 
 		<!-- Mobile Filters Toggle -->
 
@@ -32,7 +24,7 @@ $current_url = tribe_events_get_current_filter_url();
     <div class="input-container">
       <select name="category" id="category" class="select-box-default">
         <option selected>Category</option>
-        <option value="category-one">Category One</option>
+        <option value="Personal Development">Personal Development</option>
       </select>
     </div>
 
@@ -45,6 +37,14 @@ $current_url = tribe_events_get_current_filter_url();
       <select name="state" id="state" class="state select-box-default">
         <option selected>State</option>
         <option value="Melbourne">Melbourne</option>
+        <option value="Australian Capital Territory">Australian Capital Territory</option>
+        <option value="New South Wales">New South Wales</option>
+        <option value="Victoria">Victoria</option>
+        <option value="Queensland">Queensland</option>
+        <option value="South Australia">South Australia</option>
+        <option value="Western Australia">Western Australia</option>
+        <option value="Tasmania">Tasmania</option>
+        <option value="Northern Territory">Northern Territory</option>
       </select>
     </div>
 
@@ -55,5 +55,3 @@ $current_url = tribe_events_get_current_filter_url();
 	<!-- #tribe-bar-form -->
 
 </div><!-- #tribe-events-bar -->
-<?php
-do_action( 'tribe_events_bar_after_template' );

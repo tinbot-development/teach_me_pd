@@ -4,7 +4,7 @@
         padding-top: 20px;
         padding-bottom: 20px;
             section.img-slider {
-                background: url(http://teach-me-pd.dev/app/uploads/2015/09/hero-image-placeholder-742x374.jpg) center / cover no-repeat ;
+                background: url(/app/uploads/2015/09/hero-image-placeholder-742x374.jpg) center / cover no-repeat ;
                 height: 374px;
                 padding: 15px;
 
@@ -41,6 +41,15 @@
               }
           }
     }
+
+    /*Calendar Section*/
+    .calendar-info {
+        margin-bottom: 40px;
+        h5 {
+           padding: 15px 60px;
+        }
+    }
+
 }
 
 

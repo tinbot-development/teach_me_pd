@@ -118,7 +118,9 @@
     "the-events-calendar-community-events/the-events-calendar-community-events": "3.12.0",
     "wpackagist-plugin/woocommerce": "2.4.6",
     "wootickets/wootickets" : "3.12.0",
-    "gravity-forms/gravity-forms" : "1.9.5"
+    "gravity-forms/gravity-forms" : "1.9.5",
+    "wpackagist-plugin/members": "1.0.2",
+    "wpackagist-plugin/wp-members": "3.0.4"
   },
   "extra": {
     "installer-paths": {

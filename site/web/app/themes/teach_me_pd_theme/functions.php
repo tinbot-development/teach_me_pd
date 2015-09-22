@@ -19,7 +19,7 @@ $sage_includes = [
   'lib/assets.php',                // Scripts and stylesheets
   'lib/titles.php',                // Page titles
   'lib/extras.php',                // Custom functions
-  'lib/jquery-plugins.php',               // Custom jQUery Plugins
+  'lib/init-plugins.php',               // Custom jQUery Plugins
 ];
 
 foreach ($sage_includes as $file) {
@@ -47,16 +47,16 @@ add_action('wp_head','add_events_calendar_styles');
 
 
 function add_events_calendar_styles() {
-  echo '<link rel="stylesheet" id="tribe-events-bootstrap-datepicker-css-css" href="http://teach-me-pd.dev/app/plugins/the-events-calendar/vendor/bootstrap-datepicker/css/datepicker.css?ver=4.3" type="text/css" media="all">
-<link rel="stylesheet" id="tribe-events-custom-jquery-styles-css" href="http://teach-me-pd.dev/app/plugins/the-events-calendar/vendor/jquery/smoothness/jquery-ui-1.8.23.custom.css?ver=4.3" type="text/css" media="all">
-<link rel="stylesheet" id="tribe-events-full-calendar-style-css" href="http://teach-me-pd.dev/app/plugins/the-events-calendar/src/resources/css/tribe-events-full.min.css?ver=3.12.1" type="text/css" media="all">
-<link rel="stylesheet" id="tribe-events-calendar-style-css" href="http://teach-me-pd.dev/app/plugins/the-events-calendar/src/resources/css/tribe-events-theme.min.css?ver=3.12.1" type="text/css" media="all">
-<link rel="stylesheet" id="tribe-events-calendar-full-mobile-style-css" href="http://teach-me-pd.dev/app/plugins/the-events-calendar/src/resources/css/tribe-events-full-mobile.min.css?ver=3.12.1" type="text/css" media="only screen and (max-width: 768px)">
-<link rel="stylesheet" id="tribe-events-calendar-mobile-style-css" href="http://teach-me-pd.dev/app/plugins/the-events-calendar/src/resources/css/tribe-events-theme-mobile.min.css?ver=3.12.1" type="text/css" media="only screen and (max-width: 768px)">
-<link rel="stylesheet" id="tribe-events-full-pro-calendar-style-css" href="http://teach-me-pd.dev/app/plugins/events-calendar-pro/src/resources/css/tribe-events-pro-full.min.css?ver=3.12" type="text/css" media="all">
-<link rel="stylesheet" id="tribe-events-calendar-pro-style-css" href="http://teach-me-pd.dev/app/plugins/events-calendar-pro/src/resources/css/tribe-events-pro-theme.min.css?ver=3.12" type="text/css" media="all">
-<link rel="stylesheet" id="tribe-events-calendar-full-pro-mobile-style-css" href="http://teach-me-pd.dev/app/plugins/events-calendar-pro/src/resources/css/tribe-events-pro-full-mobile.min.css?ver=3.12" type="text/css" media="only screen and (max-width: 768px)">
-<link rel="stylesheet" id="tribe-events-calendar-pro-mobile-style-css" href="http://teach-me-pd.dev/app/plugins/events-calendar-pro/src/resources/css/tribe-events-pro-theme-mobile.min.css?ver=3.12" type="text/css" media="only screen and (max-width: 768px)">';
+  echo '<link rel="stylesheet" id="tribe-events-bootstrap-datepicker-css-css" href="'.get_bloginfo('url').'/app/plugins/the-events-calendar/vendor/bootstrap-datepicker/css/datepicker.css?ver=4.3" type="text/css" media="all">
+<link rel="stylesheet" id="tribe-events-custom-jquery-styles-css" href="'.get_bloginfo('url').'/app/plugins/the-events-calendar/vendor/jquery/smoothness/jquery-ui-1.8.23.custom.css?ver=4.3" type="text/css" media="all">
+<link rel="stylesheet" id="tribe-events-full-calendar-style-css" href="'.get_bloginfo('url').'/app/plugins/the-events-calendar/src/resources/css/tribe-events-full.min.css?ver=3.12.1" type="text/css" media="all">
+<link rel="stylesheet" id="tribe-events-calendar-style-css" href="'.get_bloginfo('url').'/app/plugins/the-events-calendar/src/resources/css/tribe-events-theme.min.css?ver=3.12.1" type="text/css" media="all">
+<link rel="stylesheet" id="tribe-events-calendar-full-mobile-style-css" href="'.get_bloginfo('url').'/app/plugins/the-events-calendar/src/resources/css/tribe-events-full-mobile.min.css?ver=3.12.1" type="text/css" media="only screen and (max-width: 768px)">
+<link rel="stylesheet" id="tribe-events-calendar-mobile-style-css" href="'.get_bloginfo('url').'/app/plugins/the-events-calendar/src/resources/css/tribe-events-theme-mobile.min.css?ver=3.12.1" type="text/css" media="only screen and (max-width: 768px)">
+<link rel="stylesheet" id="tribe-events-full-pro-calendar-style-css" href="'.get_bloginfo('url').'/app/plugins/events-calendar-pro/src/resources/css/tribe-events-pro-full.min.css?ver=3.12" type="text/css" media="all">
+<link rel="stylesheet" id="tribe-events-calendar-pro-style-css" href="'.get_bloginfo('url').'/app/plugins/events-calendar-pro/src/resources/css/tribe-events-pro-theme.min.css?ver=3.12" type="text/css" media="all">
+<link rel="stylesheet" id="tribe-events-calendar-full-pro-mobile-style-css" href="'.get_bloginfo('url').'/app/plugins/events-calendar-pro/src/resources/css/tribe-events-pro-full-mobile.min.css?ver=3.12" type="text/css" media="only screen and (max-width: 768px)">
+<link rel="stylesheet" id="tribe-events-calendar-pro-mobile-style-css" href="'.get_bloginfo('url').'/app/plugins/events-calendar-pro/src/resources/css/tribe-events-pro-theme-mobile.min.css?ver=3.12" type="text/css" media="only screen and (max-width: 768px)">';
 }
 
 
@@ -89,3 +89,4 @@ function enqueue_tribe_events_scripts_and_styles() {
 }
 
 add_action('wp_enqueue_scripts', 'enqueue_tribe_events_scripts_and_styles' );
+

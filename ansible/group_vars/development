@@ -11,7 +11,7 @@ wordpress_sites:
     repo: git@github.com:tinbot-development/teach_me_pd.git
     site_install: true
     site_title: Teach Me PD
-    #db_import: ../site/db/db.sql
+    db_import: ../site/db/latest-db.sql
     admin_user: admin
     admin_password: admin
     admin_email: admin@teach-me-pd.dev

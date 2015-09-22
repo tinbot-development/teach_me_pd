@@ -1,0 +1,29 @@
+.page{
+  .wrap{
+    > .content {
+        padding: 40px 0;
+    }
+  }
+
+  //Page Course Grid
+  &.courses-grid {
+      .content {
+          .main {
+            .recent-courses {
+                aside.course {
+                    margin-bottom: 30px;
+                }
+                .col-md-4 {
+
+                  &:nth-child(4n) {
+                    clear: left;
+                  }
+                }
+
+            }
+
+          }
+      }
+  }
+
+}

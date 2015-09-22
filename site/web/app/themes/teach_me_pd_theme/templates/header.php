@@ -3,9 +3,17 @@
     <div class="row">
       <nav class="pull-right-md">
           <?php
-                if (has_nav_menu('secondary_navigation')) :
-                  wp_nav_menu(['theme_location' => 'secondary_navigation', 'walker' => new wp_bootstrap_navwalker(), 'menu_class' => 'secondary-nav']);
-                endif;
+          //Control Top Navigation based on user capabilities
+          if( is_user_logged_in() ) {
+                 $menu = 'top-menu-logged-in';
+            } else {
+                 $menu = 'top-menu-logged-out';
+            }
+
+            if (has_nav_menu('secondary_navigation')) :
+              wp_nav_menu([ 'menu' => $menu,'theme_location' => 'secondary_navigation', 'walker' => new wp_bootstrap_navwalker(), 'menu_class' => 'secondary-nav']);
+            endif;
+
           ?>
       </nav>
     </div>
@@ -26,7 +34,7 @@
     <div class="row">
       <aside class="event-search-bar col-md-9 pull-right-md">
         <!-- Tribe Bar -->
-        <?php tribe_get_template_part( 'modules/bar' ); ?>
+        <?php get_template_part( 'templates/home/bar','custom'); ?>
       </aside>
     </div>
   </div>
