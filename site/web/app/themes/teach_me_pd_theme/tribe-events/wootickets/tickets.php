@@ -7,7 +7,7 @@ $is_there_any_product_to_sell = false;
 ob_start();
 ?>
 <form action="<?php echo esc_url( $woocommerce->cart->get_cart_url() ) ?>" class="cart" method="post" enctype='multipart/form-data'>
-	<h2 class="tribe-events-tickets-title"><?php esc_html_e( get_the_title(), 'tribe-wootickets' ) ?></h2>
+	<h2 class="tribe-events-tickets-title hidden"><?php esc_html_e( get_the_title(), 'tribe-wootickets' ) ?></h2>
 
 	<table width="100%" class="tribe-events-tickets">
 		<?php
@@ -44,7 +44,7 @@ ob_start();
 				echo sprintf( '<input type="hidden" name="product_id[]" value="%d">', $ticket->ID );
 
 				echo '<tr>';
-				echo '<td class="woocommerce">';
+				echo '<td class="woocommerce hidden">';
 
 				if ( $product->is_in_stock() ) {
 					// Max quantity will be left open if backorders allowed, restricted to 1 if the product is

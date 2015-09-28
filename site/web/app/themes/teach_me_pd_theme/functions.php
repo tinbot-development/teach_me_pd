@@ -31,6 +31,8 @@ foreach ($sage_includes as $file) {
 }
 unset($file, $filepath);
 
+require_once('lib/custom-functions.php');
+
 function pb_before_content_wrap() {
     do_action('pb_before_content_wrap');
 }
