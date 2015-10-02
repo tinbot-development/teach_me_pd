@@ -1,0 +1,25 @@
+body.single-tribe_provider {
+    .page-header {
+        display: none;
+    }
+
+    .tribe-events-back {
+        margin-top: 1.5em;
+    }
+
+
+    .tribe-events-organizer-meta {
+        .entry-title.author {
+            margin-top: 0;
+        }
+
+        .tribe-events-event-image {
+            @extend .hidden;
+        }
+    }
+
+    .tribe-events-list {
+        clear: left;
+    }
+
+}

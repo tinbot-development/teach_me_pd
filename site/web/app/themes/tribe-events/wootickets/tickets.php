@@ -44,7 +44,7 @@ ob_start();
 				echo sprintf( '<input type="hidden" name="product_id[]" value="%d">', $ticket->ID );
 
 				echo '<tr>';
-				echo '<td class="woocommerce">';
+				echo '<td class="woocommerce hidden">';
 
 				if ( $product->is_in_stock() ) {
 					// Max quantity will be left open if backorders allowed, restricted to 1 if the product is

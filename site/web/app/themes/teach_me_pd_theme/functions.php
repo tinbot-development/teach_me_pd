@@ -32,6 +32,9 @@ foreach ($sage_includes as $file) {
 unset($file, $filepath);
 
 require_once('lib/custom-functions.php');
+require_once('tribe-events/change_events_to_courses.php');
+
+
 
 function pb_before_content_wrap() {
     do_action('pb_before_content_wrap');

@@ -56,7 +56,9 @@ function display_sidebar() {
         'is_front_page',
         'is_archive',
         ['is_singular', 'tribe_events'],
-        ['is_page_template', 'template-custom.php']
+        ['is_singular', 'tribe_provider'],
+        ['is_page_template', 'template-custom.php'],
+        ['is_page_template', 'template-providers.php']
       ]
     );
 

@@ -39,11 +39,14 @@ function the_event_date_selector() {
           $selected = ($current_event_id == get_the_ID()) ? 'selected' : '';
           echo '<option value="'.get_permalink().'" '. $selected. '>' .  tribe_get_start_date() . '</option>';
       }
-      echo '</select>';
+
     }
-    add_action('wp_footer','the_event_date_selector_scripts');
+
+  echo '</select>';
     /* Restore original Post Data */
     wp_reset_postdata();
+
+    add_action('wp_footer','the_event_date_selector_scripts');
 }
 
 /**
