@@ -1,3 +1,13 @@
 .btn{
     border-radius: 0;
 }
+
+.woocommerce #respond input#submit,
+.woocommerce a.button,
+.woocommerce button.button,
+.woocommerce input.button,
+.button_div input.buttons{
+  @extend .btn;
+  @extend .btn-primary;
+}
+

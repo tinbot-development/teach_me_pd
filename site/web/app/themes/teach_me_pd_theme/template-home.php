@@ -6,9 +6,16 @@
 
 <div class="col-md-12 bg-success text-center calendar-info">
   <h5> For all our up and coming professional development seminars, please click on the calendar dates below.
-    Alternatively, dates and locations of our PD’s can be found under the Courses or Providers tabs.</h5>
+    Alternatively, dates and locations of our PD’s can be found under the <a href="<?php echo get_bloginfo('url');?>/courses-grid/">Courses</a> or <a href="<?php echo get_bloginfo('url');?>/providers/">Providers</a> tabs.</h5>
 </div>
 <?php
+
+add_filter('tribe_get_events_title', 'pb_change_event_title');
+function pb_change_event_title($title) {
+  $title = date('F');
+  return $title;
+}
+
 tribe_show_month( array( 'posts_per_page' => -1) );
 
 

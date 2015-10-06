@@ -1,0 +1,24 @@
+.tribe-events-calendar {
+    .tribe-events-tooltip {
+        background-color: $gray-light !important;
+        > aside {
+            background-color: $gray-lighter;
+            color: $white;
+            padding: 15px;
+            h4.entry-title {
+                color: $white !important;
+                font-size: 15px !important;
+            }
+            * {
+              color: $white;
+            }
+        }
+
+
+       .tribe-events-arrow:before,
+       .tribe-events-arrow:after{
+          color: $gray-light !important;
+          background-color-color: $gray-light !important;
+       }
+    }
+}

@@ -42,12 +42,62 @@
           }
     }
 
+    section.content-holder {
+        background-color: #e0e0e0;
+    }
+
     /*Calendar Section*/
     .calendar-info {
-        margin-bottom: 40px;
-        h5 {
-           padding: 15px 60px;
+      margin-bottom: 40px;
+      h5 {
+        padding: 15px 60px;
+      }
+    }
+    /*Tribe Events Calendar*/
+    div#tribe-events-content {
+        clear: left;
+        .tribe-events-page-title {
+            color: #233b7a;
+            font-weight: 500;
+            text-transform: capitalize;
+            text-align: left;
         }
+
+        .tribe-events-calendar {
+            thead {
+                th {
+                    background-color: $brand-primary;
+                    border-color: $brand-primary;
+                }
+            }
+            tbody {
+                tr {
+                    td {
+                        background-color: $white;
+                    }
+                }
+                .tribe_events {
+                    padding: 10px;
+                }
+            }
+        }
+
+      #tribe-events-footer {
+          ul.tribe-events-sub-nav li a {
+              color: #636466;
+              font-size: 12px;
+              text-transform: uppercase;
+              line-height: 47px;
+              > span {
+                  font-size: 33px;
+                  font-weight: 300;
+                  margin-top: 0em;
+                  float: left;
+                  display: inline;
+                  line-height: normal;
+              }
+          }
+      }
     }
 
 }

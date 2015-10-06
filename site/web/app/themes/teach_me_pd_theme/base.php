@@ -21,18 +21,20 @@ use Roots\Sage\Wrapper;
 
       pb_before_content_wrap(); //Add Hook pb_before_content_wrap
     ?>
-    <div class="wrap container" role="document">
-      <div class="content row">
-        <main class="main" role="main">
-          <?php include Wrapper\template_path(); ?>
-        </main><!-- /.main -->
-        <?php if (Config\display_sidebar()) : ?>
-          <aside class="sidebar" role="complementary">
-            <?php include Wrapper\sidebar_path(); ?>
-          </aside><!-- /.sidebar -->
-        <?php endif; ?>
-      </div><!-- /.content -->
-    </div><!-- /.wrap -->
+    <section class="content-holder">
+      <div class="wrap container" role="document">
+        <div class="content row">
+          <main class="main" role="main">
+            <?php include Wrapper\template_path(); ?>
+          </main><!-- /.main -->
+          <?php if (Config\display_sidebar()) : ?>
+            <aside class="sidebar" role="complementary">
+              <?php include Wrapper\sidebar_path(); ?>
+            </aside><!-- /.sidebar -->
+          <?php endif; ?>
+        </div><!-- /.content -->
+      </div><!-- /.wrap -->
+    </section>
     <?php
       do_action('pb_before_footer');
       do_action('get_footer');

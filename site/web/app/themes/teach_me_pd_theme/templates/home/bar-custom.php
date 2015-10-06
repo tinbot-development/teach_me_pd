@@ -24,7 +24,15 @@
     <div class="input-container">
       <select name="category" id="category" class="select-box-default">
         <option selected>Category</option>
-        <option value="Personal Development">Personal Development</option>
+        <option value="English">English</option>
+        <option value="Math">Math</option>
+        <option value="Arts">The Arts</option>
+        <option value="LOTE">LOTE</option>
+        <option value="Science">Science</option>
+        <option value="Social and Well Being">Social and Well Being</option>
+        <option value="Geography">Geography</option>
+        <option value="Economics">Economics</option>
+        <option value="IT">I.T.</option>
       </select>
     </div>
 
@@ -36,7 +44,7 @@
     <div class="input-container">
       <select name="state" id="state" class="state select-box-default">
         <option selected>State</option>
-        <option value="Melbourne">Melbourne</option>
+        <option value="All">All</option>
         <option value="Australian Capital Territory">Australian Capital Territory</option>
         <option value="New South Wales">New South Wales</option>
         <option value="Victoria">Victoria</option>
