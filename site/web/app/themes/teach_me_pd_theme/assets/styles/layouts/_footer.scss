@@ -29,6 +29,9 @@ footer.content-info {
         ul.link-with-separator{
             line-height: 42px;
             > li {
+                a {
+                    font-weight: 400;
+                }
                 &:first-child {
                     a {
                         margin-left: 0;

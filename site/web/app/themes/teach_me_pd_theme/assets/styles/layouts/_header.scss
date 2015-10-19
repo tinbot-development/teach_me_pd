@@ -30,11 +30,9 @@ header.banner {
         .input-container{
             margin: 6px;
             .sbHolder {
-
                     .sbSelector:link,
                     .sbSelector:visited,
                     .sbSelector:hover {
-
                     }
             }
         }
@@ -48,7 +46,7 @@ header.banner {
 
 
 @media screen
-and (min-width: $screen-md){
+and (min-width: $screen-sm){
     header.banner {
         height: 190px;
         a.brand {
@@ -66,14 +64,16 @@ and (min-width: $screen-md){
           float: right;
       }
       .event-search-bar{
-        .search-label{
-          float: left;
-        }
-        .input-container{
-          float: left;
-          margin-left: 3px;
-          width: 196px;
-        }
+          margin-bottom: 25px;
+          .search-label{
+            font-size: 18px;
+            float: left;
+          }
+          .input-container{
+            float: left;
+            margin-left: 3px;
+            width: 182px;
+          }
       }
     }
 

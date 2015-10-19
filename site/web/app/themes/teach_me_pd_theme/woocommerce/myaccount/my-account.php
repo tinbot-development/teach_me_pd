@@ -16,15 +16,30 @@ wc_print_notices(); ?>
 
 <!-- TAB NAVIGATION -->
 <ul class="nav nav-tabs" role="tablist">
-  <li class="active"><a href="#billing" role="tab" data-toggle="tab">Account Information</a></li>
-  <li><a href="#more-info" role="tab" data-toggle="tab">Profile</a></li>
+
+  <li class="active"><a href="#more-info" role="tab" data-toggle="tab">Profile</a></li>
   <li><a href="#courses" role="tab" data-toggle="tab">Courses</a></li>
+  <li><a href="#billing" role="tab" data-toggle="tab">Billing Information</a></li>
 
 </ul>
 <!-- TAB CONTENT -->
 <div class="tab-content">
-  <div class="active tab-pane fade in" id="billing">
-    <h2>Billing Account Information</h2>
+
+  <div class="active tab-pane  fade in" id="more-info">
+    <h2>User Profile</h2>
+
+    <?php
+
+    echo do_shortcode('[wpmem_form user_edit]');
+
+    //wpmem_inc_registration( 'edit', 'Your Profile' );
+    ?>
+  </div>
+  <div class="tab-pane fade" id="courses">
+    <?php wc_get_template( 'myaccount/my-orders.php', array( 'order_count' => $order_count ) ); ?>
+  </div>
+  <div class="tab-pane fade" id="billing">
+    <h2>Billing Information</h2>
 
     <p class="myaccount_user">
       <?php
@@ -41,14 +56,6 @@ wc_print_notices(); ?>
 
       ?>
     </p>
-  </div>
-  <div class="tab-pane fade" id="more-info">
-    <h2>User Profile</h2>
-
-    <?php echo do_shortcode('[wp-members page=user-profile]');?>
-  </div>
-  <div class="tab-pane fade" id="courses">
-    <?php wc_get_template( 'myaccount/my-orders.php', array( 'order_count' => $order_count ) ); ?>
   </div>
 
 

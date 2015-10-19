@@ -14,7 +14,7 @@
               <div class="slider-content col-md-8 col-lg-6">
                 <hgroup>
                   <h2>Welcome!</h2>
-                  <h3><strong>TeachMe PD</strong>provides professional development pathways for teachers and educators across Australia.</h3>
+                  <h3><strong>TeachMe PD</strong> provides professional development pathways for teachers and educators across Australia.</h3>
                 </hgroup>
                 <div class="row">
                   <div class="btn-holder col-sm-6">
@@ -42,41 +42,42 @@
       /*Upcoming Events Widget*/
       $args = array(
         'post_type' => 'tribe_events',
-        'post_per_page' => 3
+        'post_per_page' => 10
       );
       $courses = new WP_Query($args);
 //      TODO: Change next week manual for now
-      if( ! $courses->have_posts()) : ?>
+      if( $courses->have_posts()) : ?>
 
-        <div class="col-md-6 upcoming-events-widget">
+        <div class="col-md-6 upcoming-events-widget autoload">
           <h3>Registrations Closing Soon</h3>
-          <ul class="list-unstyled list-upcoming-events brand-success">
-        <?php
-        while($courses->have_posts()) :
-          $courses->the_post();
-          ?>
-          <li>
-                <span class="date icon-circle">
-                    <p class="month">Oct</p>
-                    <p class="day">15</p>
-                </span>
-            <div class="event-content">
-              <h5 class="event-title"><?php the_title(); ?></h5>
-              <p class="provider">Geelong VIC <a href="<?php the_permalink();?>" class="more-link">More</a></p>
-            </div>
-          </li>
+          <aside id="coursesWrapper" class="scroll-wrapper">
+            <ul id="upcomingCourses" class="scroll-pane list-unstyled list-upcoming-events brand-success">
+            <?php
+            while($courses->have_posts()) :
+              $courses->the_post();
+              $id = get_the_ID();
+              $startdate = get_post_meta($id,'_EventStartDate',true);
+              $month = date("M",strtotime($startdate));
+              $day = date("d",strtotime($startdate));
+              $organizerTitle = get_post_meta($id,'_OrganizerOrganizer');
+              $organizer = get_the_author();
+
+              ?>
+              <li>
+                    <span class="date icon-circle">
+                        <p class="month"><?php echo $month;?></p>
+                        <p class="day"><?php echo $day;?></p>
+                    </span>
+                <div class="event-content">
+                  <h5 class="event-title"><?php the_title(); ?></h5>
+                  <p class="provider"><?php echo $organizer;?> <a href="<?php the_permalink();?>" class="more-link">More</a></p>
+                </div>
+              </li>
 
 
-          <aside class="col-md-4 col-sm-6">
-            <?php the_post_thumbnail('medium', array('class' => 'img-responsive'));?>
-            <div>
-              <h5><?php the_title(); ?></h5>
-              <a href="<?php the_permalink();?>" class="btn btn-primary btn-md book-course" >Book</a>
-            </div>
+              <?php endwhile; ?>
+            </ul>
           </aside>
-
-          <?php endwhile; ?>
-          </ul>
         </div>
       <?php else:
           //Placeholder Only if No events
@@ -126,3 +127,5 @@
     </section>
   </div>
 </section>
+
+

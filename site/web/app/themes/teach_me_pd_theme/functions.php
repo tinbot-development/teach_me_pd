@@ -95,3 +95,9 @@ function enqueue_tribe_events_scripts_and_styles() {
 
 add_action('wp_enqueue_scripts', 'enqueue_tribe_events_scripts_and_styles' );
 
+
+
+
+
+
+

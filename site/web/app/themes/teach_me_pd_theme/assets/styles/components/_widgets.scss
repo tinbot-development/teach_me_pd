@@ -2,6 +2,10 @@
 .upcoming-events-widget{
       background-color: $gray-dark;
       padding: 36px;
+
+      max-height: 485px;
+      height: 478px;
+      overflow: auto;
       > h3 {
           font-weight: 500;
           margin: 0 0 1.5em 0;
