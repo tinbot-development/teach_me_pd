@@ -28,14 +28,14 @@
             </div>
           </section>
         </div>
-        <div class="col-md-2 img-holder rotate-neg-sm">
-          <img src="<?php echo get_bloginfo('url');?>/app/uploads/2015/09/banner-image-placeholder-245x288.jpg" alt="Teacher" class="img-border-lg"/>
+        <div class="img-holder rotate-neg-sm">
+          <img src="<?php echo get_bloginfo('url');?>/app/uploads/2015/09/banner-image-placeholder-245x288.jpg" alt="Teacher" class="img-border-lg" style="height: 278px;"/>
         </div>
     </section> <!-- .row-->
     <!--Upcoming Events-->
     <section class="row upcoming-events-holder">
         <div class="col-md-6 img-holder rotate-pos-sm">
-          <img src="<?php echo get_bloginfo('url');?>/app/uploads/2015/09/bw-img-placeholder-439x296.jpg" alt="Teacher" class="img-border-lg"/>
+          <img src="<?php echo get_bloginfo('url');?>/app/uploads/2015/09/bw-img-placeholder-439x296.jpg" alt="Teacher" class="img-border-lg" style="height: 265px;"/>
         </div>
 
       <?php
@@ -48,7 +48,7 @@
 //      TODO: Change next week manual for now
       if( $courses->have_posts()) : ?>
 
-        <div class="col-md-6 upcoming-events-widget autoload">
+        <div class="col-md-5 upcoming-events-widget autoload pull-right-md">
           <h3>Registrations Closing Soon</h3>
           <aside id="coursesWrapper" class="scroll-wrapper">
             <ul id="upcomingCourses" class="scroll-pane list-unstyled list-upcoming-events brand-success">

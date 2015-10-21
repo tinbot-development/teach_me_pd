@@ -4,6 +4,9 @@ namespace Roots\Sage\Config;
 
 use Roots\Sage\ConditionalTagCheck;
 
+
+
+
 /**
  * Enable theme features
  */
@@ -31,6 +34,9 @@ if (!defined('DIST_DIR')) {
  * Define which pages shouldn't have the sidebar
  */
 function display_sidebar() {
+  //DB field set by Events Rocket plugin for Frontpage Events page
+  global $wp_query;
+  $eventrocket_frontpage = $wp_query->get( 'eventrocket_frontpage' );
   static $display;
 
   if (!isset($display)) {
@@ -54,6 +60,7 @@ function display_sidebar() {
       [
         'is_404',
         'is_front_page',
+        'is_home',
         'is_archive',
         ['is_singular', 'tribe_events'],
         ['is_singular', 'tribe_provider'],
@@ -63,7 +70,13 @@ function display_sidebar() {
     );
 
     $display = apply_filters('sage/display_sidebar', $conditionalCheck->result);
+    //No Sidebar if Events Frontpage
+    if($eventrocket_frontpage) {
+      $display = apply_filters('sage/display_sidebar', false);
+    }
   }
+
+
 
   return $display;
 }

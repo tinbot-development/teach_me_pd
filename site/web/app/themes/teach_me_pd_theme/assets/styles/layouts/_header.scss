@@ -5,9 +5,10 @@ header.banner {
 
     a.brand {
         background: url(../images/logo.png) no-repeat center center;
+        background-size: cover;
         display: block;
-        height: 224px;
-        width: 224px;
+        height: 200px;
+        width: 200px;
         margin: 20px 15px;
         text-indent: -99999px;
     }
@@ -48,14 +49,20 @@ header.banner {
 @media screen
 and (min-width: $screen-sm){
     header.banner {
-        height: 190px;
+        height: 150px;
         a.brand {
-            margin-top: -1em;
+          margin-top: -1.2em;
         }
 
         h1.site-description {
             float: right;
             margin-bottom: 20px;
+        }
+        .navbar.navbar-default {
+            margin-bottom: 0;
+            #menu-main-navigation {
+                margin-top: 5px;
+            }
         }
     }
     /* Header Search Bar  */
@@ -64,10 +71,13 @@ and (min-width: $screen-sm){
           float: right;
       }
       .event-search-bar{
+          width: 700px;
           margin-bottom: 25px;
           .search-label{
-            font-size: 18px;
+            font-size: 20px;
             float: left;
+            line-height: 33px;
+            font-weight: 400;
           }
           .input-container{
             float: left;

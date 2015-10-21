@@ -40,7 +40,7 @@ if ( ! defined( 'ABSPATH' ) ) {
 
 	<!-- Month Footer -->
 	<?php do_action( 'tribe_events_before_footer' ) ?>
-	<div id="tribe-events-footer">
+	<div id="tribe-events-footer" class="test">
 
 		<!-- Footer Navigation -->
 		<?php do_action( 'tribe_events_before_footer_nav' ); ?>

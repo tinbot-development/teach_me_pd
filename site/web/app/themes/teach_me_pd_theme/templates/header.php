@@ -32,7 +32,7 @@
 <section class="header-search-bar clearfix bg-success">
   <div class="container">
     <div class="row">
-      <aside class="event-search-bar col-md-9 pull-right-md">
+      <aside class="event-search-bar pull-right-md">
         <!-- Tribe Bar -->
         <?php get_template_part( 'templates/home/bar','custom'); ?>
       </aside>

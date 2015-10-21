@@ -1,14 +1,23 @@
 <?php
-
+global $wp_query;
 use Roots\Sage\Config;
 use Roots\Sage\Wrapper;
+//DB field set by Events Rocket plugin for Frontpage Events page
+$eventrocket_frontpage = $wp_query->get( 'eventrocket_frontpage' );
 
 ?>
 
 <!doctype html>
 <html class="no-js" <?php language_attributes(); ?>>
   <?php get_template_part('templates/head'); ?>
-  <body <?php body_class(); ?>>
+  <body <?php
+  if($eventrocket_frontpage){
+    body_class('home');
+  } else {
+    body_class();
+  }
+
+  ?>>
     <!--[if lt IE 9]>
       <div class="alert alert-warning">
         <?php _e('You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.', 'sage'); ?>
@@ -17,7 +26,11 @@ use Roots\Sage\Wrapper;
     <?php
       do_action('get_header');
       get_template_part('templates/header');
-      if(is_front_page()) get_template_part('templates/home/front-page','banner');
+
+
+      if($eventrocket_frontpage) {
+        get_template_part('templates/home/front-page','banner');
+      }
 
       pb_before_content_wrap(); //Add Hook pb_before_content_wrap
     ?>
