@@ -20,11 +20,24 @@
         }
 
 
+       .tribe-events-arrow{
+            background-image: url("../images/icons/tribe-theme-tooltips.png");
+
+       }
+
        .tribe-events-arrow:before,
        .tribe-events-arrow:after{
           color: $gray-light !important;
           background-color-color: $gray-light !important;
        }
     }
+}
+
+.tribe-events-footer{
+
+}
+
+.tribe-events-ical.tribe-events-button {
+  margin: 0;
 }
 

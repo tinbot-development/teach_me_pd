@@ -22,9 +22,14 @@ footer.content-info {
     section.footer-bottom{
         padding: 15px 0;
         ul {
-            float: left;
             margin: 0;
             padding: 0;
+        }
+
+        ul.footer-nav {
+          line-height: 42px;
+          float: none;
+          display: inline-block;
         }
         ul.link-with-separator{
             line-height: 42px;
@@ -32,9 +37,9 @@ footer.content-info {
                 a {
                     font-weight: 400;
                 }
-                &:first-child {
+                &:last-child {
                     a {
-                        margin-left: 0;
+                        margin-right: 0;
                     }
                 }
             }

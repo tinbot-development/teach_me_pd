@@ -23,3 +23,11 @@ body.single-tribe_provider {
     }
 
 }
+
+body.providers {
+    .provider-holder{
+        img.img-responsive.provider-img {
+            border: 4px solid $brand-primary;
+        }
+    }
+}

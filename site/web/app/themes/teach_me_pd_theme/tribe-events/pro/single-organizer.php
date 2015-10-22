@@ -55,7 +55,7 @@ if($courses_only == 1 ){
 <?php while ( have_posts() ) : the_post(); ?>
 	<div class="tribe-events-organizer">
 			<p class="tribe-events-back">
-				<a href="<?php echo esc_url( tribe_get_events_link() ); ?>" rel="bookmark"><?php printf( __( '&larr; Back to %s', 'tribe-events-calendar-pro' ), tribe_get_event_label_plural() ); ?></a>
+				<a href="<?php echo home_url(); ?>/courses-grid/" rel="bookmark"><?php printf( __( '&larr; Back to %s', 'tribe-events-calendar-pro' ), tribe_get_event_label_plural() ); ?></a>
 			</p>
     <section class="tribe-provider-info <?php echo $hidden;?>">
 

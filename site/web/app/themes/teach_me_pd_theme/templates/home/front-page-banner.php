@@ -42,7 +42,10 @@
       /*Upcoming Events Widget*/
       $args = array(
         'post_type' => 'tribe_events',
-        'post_per_page' => 10
+        'post_per_page' => 10,
+        "orderby" => 'meta_value_num',
+        "meta_key" => '_EventStartDate',
+        "order" => 'ASC'
       );
       $courses = new WP_Query($args);
 //      TODO: Change next week manual for now
@@ -54,25 +57,25 @@
             <ul id="upcomingCourses" class="scroll-pane list-unstyled list-upcoming-events brand-success">
             <?php
             while($courses->have_posts()) :
-              $courses->the_post();
-              $id = get_the_ID();
-              $startdate = get_post_meta($id,'_EventStartDate',true);
-              $month = date("M",strtotime($startdate));
-              $day = date("d",strtotime($startdate));
-              $organizerTitle = get_post_meta($id,'_OrganizerOrganizer');
-              $organizer = get_the_author();
+                  $courses->the_post();
+                  $id = get_the_ID();
+                  $startdate = get_post_meta($id,'_EventStartDate',true);
+                  $month = date("M",strtotime($startdate));
+                  $day = date("d",strtotime($startdate));
+                  $organizerTitle = get_post_meta($id,'_OrganizerOrganizer');
+                  $organizer = get_the_author();
 
               ?>
-              <li>
-                    <span class="date icon-circle">
-                        <p class="month"><?php echo $month;?></p>
-                        <p class="day"><?php echo $day;?></p>
-                    </span>
-                <div class="event-content">
-                  <h5 class="event-title"><?php the_title(); ?></h5>
-                  <p class="provider"><?php echo $organizer;?> <a href="<?php the_permalink();?>" class="more-link">More</a></p>
-                </div>
-              </li>
+                  <li>
+                        <span class="date icon-circle">
+                            <p class="month"><?php echo $month;?></p>
+                            <p class="day"><?php echo $day;?></p>
+                        </span>
+                    <div class="event-content">
+                      <h5 class="event-title"><?php the_title(); ?></h5>
+                      <p class="provider"><?php echo $organizer;?> <a href="<?php the_permalink();?>" class="more-link">More</a></p>
+                    </div>
+                  </li>
 
 
               <?php endwhile; ?>

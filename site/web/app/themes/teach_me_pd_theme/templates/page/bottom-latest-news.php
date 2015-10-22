@@ -3,6 +3,12 @@
  * Page Bottom Latest News Section
  */
 
+?>
+
+<h2 class="tribe-events-page-title">Latest News</h2>
+
+
+<?php
 
 $args = array(
   'post_type' => 'post',
@@ -10,7 +16,7 @@ $args = array(
 );
 $news = new WP_Query($args);
 
-if($news->have_posts()) : ?>
+if( $news->have_posts()) : ?>
 <section class="bottom-latest-news">
   <div class="container">
     <div class="row">

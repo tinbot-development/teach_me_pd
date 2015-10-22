@@ -18,6 +18,26 @@
     }
 }
 
+.footer-nav{
+  list-style: none;
+  padding: 0 15px;
+  >li {
+    float: left;
+    >a {
+      border-right: 1px solid;
+      color: $white;
+      font-size: $font-size-small;
+      font-weight: 400;
+      padding: 0 5px;
+    }
+    &:last-child {
+      >a {
+        border-right: none;
+        padding-right: 0;
+      }
+    }
+  }
+}
 nav.navbar.navbar-default {
   .menu-main-navigation-container{
     ul.nav.navbar-nav {
