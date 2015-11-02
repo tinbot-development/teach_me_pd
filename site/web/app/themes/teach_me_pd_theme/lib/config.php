@@ -66,14 +66,15 @@ function display_sidebar() {
         ['is_singular', 'tribe_provider'],
         ['is_page_template', 'template-custom.php'],
         ['is_page_template', 'template-courses.php'],
-        ['is_page_template', 'template-providers.php']
+        ['is_page_template', 'template-providers.php'],
+        ['is_page', 'my-account']
       ]
     );
 
     $display = apply_filters('sage/display_sidebar', $conditionalCheck->result);
     //No Sidebar if Events Frontpage
     if($eventrocket_frontpage) {
-      $display = apply_filters('sage/display_sidebar', false);
+        $display = apply_filters('sage/display_sidebar', false);
     }
   }
 
@@ -81,3 +82,6 @@ function display_sidebar() {
 
   return $display;
 }
+
+
+add_image_size( 'courses-grid-thumb', 370, 370, true );

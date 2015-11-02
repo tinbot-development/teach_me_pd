@@ -44,7 +44,7 @@ ob_start();
 				echo sprintf( '<input type="hidden" name="product_id[]" value="%d">', $ticket->ID );
 
 				echo '<tr>';
-				echo '<td class="woocommerce">';
+				echo '<td class="woocommerce hidden">';
 
 				if ( $product->is_in_stock() ) {
 					// Max quantity will be left open if backorders allowed, restricted to 1 if the product is
@@ -54,7 +54,7 @@ ob_start();
 
 					woocommerce_quantity_input( array(
 						'input_name'  => 'quantity_' . $ticket->ID,
-						'input_value' => 0,
+						'input_value' => 1,
 						'min_value'   => 0,
 						'max_value'   => $max_quantity,
 					) );
@@ -65,13 +65,17 @@ ob_start();
 				}
 				echo '</td>';
 
+        echo '<td class="tickets_price">';
+        echo $this->get_price_html( $product );
+        echo '</td>';
+
 				echo '<td class="tickets_name">';
 				echo $ticket->name;
 				echo '</td>';
 
-				echo '<td class="tickets_price">';
-				echo $this->get_price_html( $product );
-				echo '</td>';
+
+        echo '</tr>';
+        echo '<tr>';
 
 				echo '<td class="tickets_description">';
 				echo $ticket->description;
@@ -84,7 +88,7 @@ ob_start();
 		if ( $is_there_any_product_to_sell ) {
 			?>
 			<tr>
-				<td colspan="4" class="woocommerce add-to-cart">
+				<td colspan="4" class="woocommerce add-to-cart test-wootickets">
 
 					<button type="submit" name="wootickets_process" value="1"
 					        class="btn btn-primary"><?php esc_html_e( 'Book Now', 'tribe-wootickets' );?></button>

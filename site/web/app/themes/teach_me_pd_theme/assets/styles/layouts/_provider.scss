@@ -3,24 +3,186 @@ body.single-tribe_provider {
         display: none;
     }
 
+    .provider-banner {
+        background: url(/app/uploads/2015/09/hero-image-placeholder-742x374.jpg) center/cover no-repeat; //default Image
+        min-height: 390px;
+        position: relative;
+        //Icons and Logo
+        .icon-logo-holder{
+            position: relative;
+            top: 10em;
+            z-index: 10;
+            ul.social-media-icons {
+              >li {
+                float: left;
+                margin-right: 1em;
+                >a {
+                  margin-top: 1em;
+                }
+                &.logo {
+                  margin: 0 0 0 2em;
+                  > a {
+                    background: none;
+                    margin: 0;
+                    height: auto;
+                    width: 100%;
+                    > img {
+                      display: block;
+                    }
+                  }
+                }
+              }
+            }
+        }
+
+      //Provider Information
+      .bg-overlay {
+          background: rgba(51, 51, 51, 0.7);
+          padding: 2em 0;
+          position: absolute;
+          bottom: 0;
+          left: 0;
+          width: 100%;
+          * {
+            color: #fff;
+            text-align: right;
+          }
+          a { color: #FFC502;}
+          address {
+            color: #d2d2d2;
+            font-weight: 300;
+            margin: 1em 0;
+          }
+      }
+    }
+
+
+  //Provider Top Menu
+  nav.provider-top-nav {
+      border: 1px solid #cdcdcd;
+      margin-bottom: 2em;
+
+      ul#menu-provider-top-nav {
+        color: #cdcdcd;
+        float: left;
+        list-style: none;
+        margin-bottom: 0;
+
+        padding: 0;
+        width: 100%;
+        > li {
+          float: left;
+          > a {
+            border-right: 1px solid;
+            color: #cdcdcd;
+            float: left;
+            padding: 1em 2em;
+          }
+          &:first-child {
+              > a {
+                border-left: 1px solid;
+              }
+          }
+        }
+      }
+  }
+
     .tribe-events-back {
         margin-top: 1.5em;
     }
 
 
+    h2.provider-title {
+      border-bottom: 1px solid;
+      padding-bottom: 10px;
+    }
+
     .tribe-events-organizer-meta {
+        max-width: 100%;
         .entry-title.author {
             margin-top: 0;
         }
 
         .tribe-events-event-image {
-            @extend .hidden;
+            //@extend .hidden;
         }
+
+
     }
 
     .tribe-events-list {
         clear: left;
     }
+    .provider-images{
+      .secondary-image{
+          margin-top: 2em;
+      }
+    }
+
+  /* Provider Recent Courses*/
+    .recent-courses {
+        aside.course {
+            margin-bottom: 30px;
+            .grid-content{
+              background: #fff;
+              border: 1px solid #cecece;
+            }
+            .bg-overlay {
+              background: rgba(102, 102, 102, 0.46);
+              float: left;
+              padding: 10px;
+              position: relative;
+              width: 100%;
+              margin-top: -65px;
+              .tribe-events-event-cost {
+                border-right: 1px solid rgba(245, 245, 245, 0.31);
+                margin: 0 1em 0 0;
+                padding-right: 4px;
+                > * {
+                  color: #ffffff;
+                  float: left;
+                  width: 100%;
+                  text-align: center;
+                }
+                small {
+
+                }
+                span {
+                }
+              }
+
+              a.book-now {
+                color: #fff;
+                float: left;
+                font-size: 20px;
+                line-height: 2em;
+                text-decoration: none;
+              }
+              .provider-logo {
+                float: right;
+                width: 80px;
+                position: absolute;
+                right: 1em;
+              }
+            }
+
+
+            h5 {
+                float: left;
+                margin: 0;
+                padding: 1em;
+                width: 82%;
+                line-height: 1.6em;
+            }
+          }
+          .col-md-4 {
+            &:nth-child(4n) {
+
+            }
+          }
+
+    }
+
 
 }
 

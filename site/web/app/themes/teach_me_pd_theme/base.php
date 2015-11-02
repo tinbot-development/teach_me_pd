@@ -13,6 +13,8 @@ $eventrocket_frontpage = $wp_query->get( 'eventrocket_frontpage' );
   <body <?php
   if($eventrocket_frontpage){
     body_class('home');
+    // Bottom Latest News Section
+    add_action('pb_before_footer', 'add_bottom_latest_news_section', 10);
   } else {
     body_class();
   }
@@ -26,12 +28,9 @@ $eventrocket_frontpage = $wp_query->get( 'eventrocket_frontpage' );
     <?php
       do_action('get_header');
       get_template_part('templates/header');
-
-
       if($eventrocket_frontpage) {
         get_template_part('templates/home/front-page','banner');
       }
-
       pb_before_content_wrap(); //Add Hook pb_before_content_wrap
     ?>
     <section class="content-holder">

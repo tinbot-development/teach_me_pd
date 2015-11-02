@@ -33,6 +33,7 @@ if ( $customer_orders ) : ?>
 				<th class="order-date"><span class="nobr"><?php _e( 'Date', 'woocommerce' ); ?></span></th>
 				<th class="order-status"><span class="nobr"><?php _e( 'Status', 'woocommerce' ); ?></span></th>
 				<th class="order-total"><span class="nobr"><?php _e( 'Total', 'woocommerce' ); ?></span></th>
+        <th class="order-hours"><span class="nobr"><?php _e( 'Hours', 'woocommerce' ); ?></span></th>
 				<th class="order-actions">&nbsp;</th>
 			</tr>
 		</thead>
@@ -42,6 +43,8 @@ if ( $customer_orders ) : ?>
 				$order = wc_get_order( $customer_order );
 				$order->populate( $customer_order );
 				$item_count = $order->get_item_count();
+
+
 
 				?><tr class="order">
 					<td class="order-number" data-title="<?php esc_attr_e( 'Order Number', 'woocommerce' ); ?>">
@@ -58,6 +61,22 @@ if ( $customer_orders ) : ?>
 					<td class="order-total" data-title="<?php esc_attr_e( 'Total', 'woocommerce' ); ?>">
 						<?php echo sprintf( _n( '%s for %s item', '%s for %s items', $item_count, 'woocommerce' ), $order->get_formatted_order_total(), $item_count ); ?>
 					</td>
+          <td class="course-hours" data-title="Hours">
+                <?php
+                $items = $order->get_items();
+
+
+
+                foreach($items as $item)    {
+                  $item_id = $item['product_id'];
+//                  var_dump(get_fields($item_id),$item_id);
+                  $product = new WC_Product($item_id);
+                  var_dump(get_fields($product));
+
+                }
+
+                ?>
+          </td>
 					<td class="order-actions">
 						<?php
 							$actions = array();

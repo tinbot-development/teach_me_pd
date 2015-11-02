@@ -20,6 +20,7 @@ if ( ! empty( $providers->results ) ) {
             <div class="col-md-2">
               <?php
               $acfpostid = 'user_' . $provider->ID;
+              $overview_description = get_field('overview_description',$acfpostid);
               $image = get_field('profile_image',$acfpostid);
               $size ='medium';
 
@@ -37,7 +38,7 @@ if ( ! empty( $providers->results ) ) {
             </div>
             <div class="col-md-10 provider-info">
               <h4 class="provider-name"><?php echo $provider->display_name;?></h4>
-              <aside class="provider-bio"><?php echo wpautop($provider_bio);?></aside>
+              <aside class="provider-bio"><?php echo wp_trim_words( wpautop($overview_description), 50, '...' );?></aside>
               <a href="<?php echo $tribe_provider_permalink;?>" class="provider-more-info">Read more about this provider</a><a href="<?php echo $tribe_provider_permalink;?>/?courses_only=1" class="all-courses pull-right-md">See all courses from this provider</a>
             </div>
         </div>

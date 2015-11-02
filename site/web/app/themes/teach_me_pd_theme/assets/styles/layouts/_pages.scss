@@ -12,6 +12,57 @@
             .recent-courses {
                 aside.course {
                     margin-bottom: 30px;
+                    .grid-content{
+                        background: #fff;
+                        border: 1px solid #cecece;
+                    }
+                    .bg-overlay {
+                        background: rgba(102, 102, 102, 0.46);
+                        float: left;
+                        padding: 10px;
+                        position: relative;
+                        width: 100%;
+                        margin-top: -65px;
+                        .tribe-events-event-cost {
+                          border-right: 1px solid rgba(245, 245, 245, 0.31);
+                          margin-right: 1em;
+                          padding-right: 4px;
+                          > * {
+                            color: #ffffff;
+                            float: left;
+                            width: 100%;
+                            text-align: center;
+                          }
+                          small {
+
+                          }
+                          span {
+
+                          }
+                        }
+
+                        a.book-now {
+                          color: #fff;
+                          float: left;
+                          font-size: 20px;
+                          line-height: 2em;
+                          text-decoration: none;
+                        }
+                        .provider-logo {
+                            float: right;
+                            width: 80px;
+                            position: absolute;
+                            right: 1em;
+                        }
+                    }
+
+
+                  h5 {
+                    float: left;
+                    padding: 1em;
+                    width: 77%;
+                    line-height: 1.6em;
+                  }
                 }
                 .col-md-4 {
                   &:nth-child(4n) {

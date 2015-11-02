@@ -96,8 +96,53 @@ function enqueue_tribe_events_scripts_and_styles() {
 add_action('wp_enqueue_scripts', 'enqueue_tribe_events_scripts_and_styles' );
 
 
+add_action('pb_before_content_wrap','before_content_wrap_banner');
+
+function before_content_wrap_banner(){
+  if(is_singular('tribe_provider')){
+    get_template_part('templates/provider/single','banner');
+  }
+}
 
 
+/**
+ * Trims a string of words to a specified number of characters, gracefully stopping at white spaces.
+ * Also strips HTML tags, to prevent breaking in the middle of a tag.
+ *
+ * @param	string $text  The string of words to be trimmed.
+ * @param	int $length  Maximum number of characters; defaults to 45.
+ * @param	string $append  String to append to end, when trimmed; defaults to ellipsis.
+ *
+ * @return	String of words trimmed at specified character length.
+ *
+ * @author c.bavota
+ */
+function pb_trim_characters( $text, $length = 45, $append = '&hellip;' ) {
 
+  $length = (int) $length;
+  $text = trim( strip_tags( $text ) );
 
+  if ( strlen( $text ) > $length ) {
+    $text = substr( $text, 0, $length + 1 );
+    $words = preg_split( "/[\s]|&nbsp;/", $text, -1, PREG_SPLIT_NO_EMPTY );
+    preg_match( "/[\s]|&nbsp;/", $text, $lastchar, 0, $length );
+    if ( empty( $lastchar ) )
+      array_pop( $words );
+
+    $text = implode( ' ', $words ) . $append;
+  }
+
+  return $text;
+}
+
+/** Get Organizer Logo
+ * @param null $postId
+ * @return mixed|void
+ */
+function tribe_get_organizer_logo( $postId = null ) {
+  $postId = Tribe__Events__Main::postIdHelper( $postId );
+  $output = esc_html( tribe_get_event_meta( tribe_get_organizer_id( $postId ), 'provider_logo', true ) );
+
+  return apply_filters( 'tribe_get_organizer_email', $output );
+}
 

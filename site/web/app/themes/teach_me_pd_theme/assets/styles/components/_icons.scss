@@ -27,8 +27,16 @@ ul.social-media-icons {
             &.twitter {
               background-position: center center;
             }
-            &.linkedin {
+            &.instagram {
               background-position: right center;
+
+            }
+        }
+    }
+    &.round{
+        >li {
+            >a {
+                background-image: url("../images/icons/social-media-round.png");
             }
         }
     }

@@ -52,44 +52,49 @@ if($courses_only == 1 ){
 
 ?>
 
+
 <?php while ( have_posts() ) : the_post(); ?>
 	<div class="tribe-events-organizer">
-			<p class="tribe-events-back">
-				<a href="<?php echo home_url(); ?>/courses-grid/" rel="bookmark"><?php printf( __( '&larr; Back to %s', 'tribe-events-calendar-pro' ), tribe_get_event_label_plural() ); ?></a>
-			</p>
     <section class="tribe-provider-info <?php echo $hidden;?>">
 
-
-        <div class="col-md-4">
-            <?php
-                the_post_thumbnail('full', array('class'=>'img-responsive'));
-            ?>
-        </div>
         <?php do_action( 'tribe_events_single_organizer_before_organizer' ) ?>
-        <div class="tribe-events-organizer-meta vcard tribe-clearfix col-md-8">
-
-            <!-- Organizer Title -->
-            <?php do_action( 'tribe_events_single_organizer_before_title' ) ?>
-            <?php the_title( '<h2 class="entry-title author fn org">', '</h2>' ); ?>
-            <?php do_action( 'tribe_events_single_organizer_after_title' ) ?>
-
-            <!-- Organizer Meta -->
-            <?php do_action( 'tribe_events_single_organizer_before_the_meta' ); ?>
-            <?php echo tribe_get_meta_group( 'tribe_event_organizer' ) ?>
-            <?php do_action( 'tribe_events_single_organizer_after_the_meta' ) ?>
-
-            <!-- Organizer Featured Image -->
-            <?php echo tribe_event_featured_image( null, 'full' ) ?>
-
-            <!-- Organizer Content -->
-            <?php if ( get_the_content() ) { ?>
-            <div class="tribe-organizer-description tribe-events-content entry-content">
-              <?php the_content(); ?>
-            </div>
-            <?php } ?>
-
+        <div class="row">
+          <div class="col-md-8">
+            <h2 class="provider-title">About</h2>
+          </div>
         </div>
-        <!-- .tribe-events-organizer-meta -->
+
+        <section class="row">
+            <div class="tribe-events-organizer-meta vcard tribe-clearfix col-md-8">
+                <!-- Organizer Content -->
+                <?php if ( get_the_content() ) { ?>
+                <div class="tribe-organizer-description tribe-events-content entry-content">
+                  <?php the_content(); ?>
+                </div>
+                <?php } ?>
+
+            </div>
+            <!-- .tribe-events-organizer-meta -->
+
+            <div class="provider-images col-md-4">
+              <!-- Organizer Featured Image -->
+              <?php
+                  the_post_thumbnail('medium', array('class'=>'img-responsive'));
+
+                  $secondary_image = get_field('_Organizer2ndImage');
+                  $size = 'medium'; // (thumbnail, medium, large, full or custom size)
+                  $attr = array(
+                      'class'	=> "attachment-$size img-responsive secondary-image",
+
+                  );
+
+                  if( $secondary_image ) {
+                    echo wp_get_attachment_image( $secondary_image, $size, false, $attr);
+                  }
+
+              ?>
+            </div>
+        </section>
     </section>
 		<?php do_action( 'tribe_events_single_organizer_after_organizer' ) ?>
 
@@ -98,7 +103,9 @@ if($courses_only == 1 ){
 
 		<?php
 		// Use the tribe_events_single_organizer_posts_per_page to filter the number of events to get here.
-		echo tribe_organizer_upcoming_events( $organizer_id ); ?>
+		echo tribe_organizer_upcoming_events( $organizer_id );
+    //get_template_part('templates/content','courses-grid');
+		?>
 
 		<?php do_action( 'tribe_events_single_organizer_after_upcoming_events' ) ?>
 
