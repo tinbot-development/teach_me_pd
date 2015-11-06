@@ -65,6 +65,7 @@ function display_sidebar() {
         ['is_singular', 'tribe_events'],
         ['is_singular', 'tribe_provider'],
         ['is_page_template', 'template-custom.php'],
+//        ['is_page_template', 'template-news.php'],
         ['is_page_template', 'template-courses.php'],
         ['is_page_template', 'template-providers.php'],
         ['is_page', 'my-account']

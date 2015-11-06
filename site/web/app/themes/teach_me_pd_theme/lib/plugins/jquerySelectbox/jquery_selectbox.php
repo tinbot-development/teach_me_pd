@@ -18,12 +18,25 @@ function jquery_selectbox_files() {
 
 
 add_action( 'wp_footer', 'custom_selectbox_scripts' );
+
 function custom_selectbox_scripts(){
+  if(wp_is_mobile()):
+    //Mobile Only jQuery Select Boxes
   ?>
-  <script type="text/javascript">
+    <script type="text/javascript">
     jQuery("select.select-box-default").selectbox({
       effect: "fade"
     });
   </script>
   <?php
+  else:
+    //Default Select Box and Desktop Only Select Boxes
+    ?>
+    <script type="text/javascript">
+      jQuery("select.select-box-default, select.jquery-select-desktop").selectbox({
+        effect: "fade"
+      });
+    </script>
+    <?php
+  endif;
 }

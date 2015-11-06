@@ -22,15 +22,19 @@ ul.social-media-icons {
             text-indent: -99999px;
 
             &.facebook {
-                background-position: left center;
+                background-position: left top;
             }
             &.twitter {
-              background-position: center center;
+              background-position: center top;
             }
             &.instagram {
-              background-position: right center;
+              background-position: right top;
 
             }
+
+          &.pinterest {
+            background-position: left bottom;
+          }
         }
     }
     &.round{

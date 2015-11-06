@@ -55,7 +55,7 @@ if($courses_only == 1 ){
 
 <?php while ( have_posts() ) : the_post(); ?>
 	<div class="tribe-events-organizer">
-    <section class="tribe-provider-info <?php echo $hidden;?>">
+    <section id="about" class="tribe-provider-info <?php echo $hidden;?>">
 
         <?php do_action( 'tribe_events_single_organizer_before_organizer' ) ?>
         <div class="row">

@@ -19,7 +19,7 @@
     </div>
     <div class="row">
           <a class="brand pull-left-md" href="<?= esc_url(home_url('/')); ?>"><?php bloginfo('name'); ?></a>
-          <div class="col-md-8 pull-right-md">
+          <div class="main-nav-holder col-md-8 pull-right-md">
               <?php get_template_part('templates/nav');?>
               <h1 class="site-description"><?php echo get_bloginfo('description');?></h1>
           </div>

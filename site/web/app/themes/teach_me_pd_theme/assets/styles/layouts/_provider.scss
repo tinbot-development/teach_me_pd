@@ -1,3 +1,41 @@
+/*Providers List Page*/
+body.providers {
+  .provider-holder{
+    img.img-responsive.provider-img {
+      border: 4px solid $brand-primary;
+    }
+  }
+
+      /*Mobile Provider List Styles*/
+      @media screen
+      and (max-width: $screen-sm-max){
+        &.mobile {
+          .providers-list {
+            .row:first-child{
+              .provider-holder{
+                padding-top: 0;
+              }
+            }
+            .row {
+              .provider-holder{
+                .provider-name {
+                  margin-top: 1em;
+                }
+                .provider-bio {
+                  margin-bottom: 10px;
+                }
+                a.provider-links{
+                  float: left;
+                  width: 100%;
+                }
+              }
+            }
+          }
+        }
+      }
+}
+
+/*Single Provider Page Template*/
 body.single-tribe_provider {
     .page-header {
         display: none;
@@ -85,6 +123,20 @@ body.single-tribe_provider {
           }
         }
       }
+
+    /*Bootstrap Affix*/
+    &.affix {
+        top: 0;
+        width: 100%;
+        background: white;
+        z-index: 100;
+    }
+  }
+  //with admin bar on desktop
+  &.desktop.admin-bar{
+    .provider-top-nav.affix {
+      top: 2em;
+    }
   }
 
     .tribe-events-back {
@@ -119,77 +171,55 @@ body.single-tribe_provider {
       }
     }
 
-  /* Provider Recent Courses*/
-    .recent-courses {
-        aside.course {
-            margin-bottom: 30px;
-            .grid-content{
-              background: #fff;
-              border: 1px solid #cecece;
-            }
-            .bg-overlay {
-              background: rgba(102, 102, 102, 0.46);
-              float: left;
-              padding: 10px;
-              position: relative;
-              width: 100%;
-              margin-top: -65px;
-              .tribe-events-event-cost {
-                border-right: 1px solid rgba(245, 245, 245, 0.31);
-                margin: 0 1em 0 0;
-                padding-right: 4px;
-                > * {
-                  color: #ffffff;
-                  float: left;
-                  width: 100%;
-                  text-align: center;
-                }
-                small {
 
-                }
-                span {
-                }
-              }
-
-              a.book-now {
-                color: #fff;
-                float: left;
-                font-size: 20px;
-                line-height: 2em;
-                text-decoration: none;
-              }
-              .provider-logo {
-                float: right;
-                width: 80px;
-                position: absolute;
-                right: 1em;
-              }
-            }
-
-
-            h5 {
-                float: left;
-                margin: 0;
-                padding: 1em;
-                width: 82%;
-                line-height: 1.6em;
-            }
-          }
-          .col-md-4 {
-            &:nth-child(4n) {
-
-            }
-          }
-
-    }
 
 
 }
 
-body.providers {
-    .provider-holder{
-        img.img-responsive.provider-img {
-            border: 4px solid $brand-primary;
+
+
+
+/*Mobile Single Provider Styles*/
+@media screen
+and (max-width: $screen-sm-max){
+  body.mobile {
+    .provider-banner {
+        .icon-logo-holder {
+            top: 2em;
+            ul.social-media-icons>li{
+                &.logo{
+                    margin: 2em 0 0 0;
+                }
+            }
         }
     }
+
+    #tribe-events-content{
+        margin: 1em 0;
+    }
+  }
+}
+
+//Ipad Specific Styles
+body.tablet{
+  //Portrait
+  @media screen
+  and (min-device-width: 768px)
+  and (max-device-width: 1024px)
+  and (orientation: portrait) {
+    .provider-banner {
+      .icon-logo-holder {
+        top: 6em;
+        float: left;
+        ul.social-media-icons>li{
+          &.logo{
+            float: left;
+            clear: left;
+            margin: 2em 0 0 0 !important;
+          }
+        }
+      }
+    }
+  }
+
 }

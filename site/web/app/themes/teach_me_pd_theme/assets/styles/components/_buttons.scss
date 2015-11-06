@@ -1,5 +1,8 @@
 .btn{
     border-radius: 0;
+    &.btn-disabled{
+      background-color: #34495e;
+    }
 }
 
 .woocommerce #respond input#submit,

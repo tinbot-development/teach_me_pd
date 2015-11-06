@@ -23,7 +23,8 @@ $customer_orders = get_posts( apply_filters( 'woocommerce_my_account_my_orders_q
 
 if ( $customer_orders ) : ?>
 
-	<h2><?php echo apply_filters( 'woocommerce_my_account_my_orders_title', __( 'My Courses', 'woocommerce' ) ); ?></h2>
+	<h3><?php echo apply_filters( 'woocommerce_my_account_my_orders_title', __( 'Courses', 'woocommerce' ) ); ?></h3>
+  <p>Here are the courses you have booked. The Download certificate link will be available once you have completed your course.</p>
 
 	<table class="shop_table shop_table_responsive my_account_orders">
 
@@ -34,6 +35,7 @@ if ( $customer_orders ) : ?>
 				<th class="order-status"><span class="nobr"><?php _e( 'Status', 'woocommerce' ); ?></span></th>
 				<th class="order-total"><span class="nobr"><?php _e( 'Total', 'woocommerce' ); ?></span></th>
         <th class="order-hours"><span class="nobr"><?php _e( 'Hours', 'woocommerce' ); ?></span></th>
+        <th class="order-download-certificate"><span class="nobr"><?php _e( 'Course Certificate', 'woocommerce' ); ?></span></th>
 				<th class="order-actions">&nbsp;</th>
 			</tr>
 		</thead>
@@ -64,19 +66,42 @@ if ( $customer_orders ) : ?>
           <td class="course-hours" data-title="Hours">
                 <?php
                 $items = $order->get_items();
-
-
-
                 foreach($items as $item)    {
-                  $item_id = $item['product_id'];
-//                  var_dump(get_fields($item_id),$item_id);
-                  $product = new WC_Product($item_id);
-                  var_dump(get_fields($product));
-
+                  $ticket_id = $item['product_id'];
+                  $tribe_eventID = get_post_meta($ticket_id,'_tribe_wooticket_for_event',true); //Get Event ID from Ticket/Product ID
+                  //show No. Of Hours
+                  the_field('no_of_hours',$tribe_eventID);
                 }
 
                 ?>
           </td>
+
+
+
+          <td class="course-certificate" data-title="Certificate">
+            <?php
+              $items = $order->get_items();
+              foreach($items as $item)    {
+                $ticket_id = $item['product_id'];
+                $tribe_eventID = get_post_meta($ticket_id,'_tribe_wooticket_for_event',true); //Get Event ID from Ticket/Product ID
+                //Check if Course is marked as complete and certficate is ready for download
+
+                $course_complete = get_field('course_complete',$tribe_eventID);
+
+                  if($course_complete){
+                      //Show Download Link
+                      $certificate = get_field('certificate',$tribe_eventID);
+
+                      if($certificate){
+                          echo '<a class="btn btn-primary" href="'. $certificate['url'].'" download="'.$certificate['filename'].'">Download</a>';
+                      }
+                  }
+              }
+
+
+            ?>
+          </td>
+
 					<td class="order-actions">
 						<?php
 							$actions = array();

@@ -1,0 +1,80 @@
+/* News Page Template */
+body.news{
+  /* Recent News Grid */
+  .recent-news {
+    aside.news {
+      margin-bottom: 30px;
+      .grid-content{
+        background: #fff;
+        border: 1px solid #cecece;
+        .bg-overlay {
+          background: #636466;
+          background: rgba(99, 100, 102, 0.75);
+          float: left;
+          padding: 10px;
+          position: relative;
+          width: 100%;
+          margin-top: -60px;
+          h4 {
+            color: #fff;
+            float: left;
+            margin: 0;
+            width: 100%;
+            min-height: 40px;
+            line-height: 1.3em;
+          }
+        }
+
+        .entry-content{
+          padding: 1em;
+          p {
+              color: black;
+              font-size: 16px;
+              line-height: 1.2em;
+          }
+          a.book-now {
+            color: #fff;
+            float: left;
+            font-size: 20px;
+            line-height: 2em;
+            text-decoration: none;
+          }
+        }
+      }
+
+
+
+
+    }
+    @media screen
+    and (max-width: $screen-md-max){
+      aside.news {
+        .grid-content{
+          h4 {
+            min-height: 7em;
+
+          }
+        }
+      }
+    }
+
+
+    @media screen
+    and (max-width: $screen-xs-max){
+      aside.news {
+        .grid-content{
+          .wp-post-image {
+            width: 100%;
+          }
+          .bg-overlay {
+            margin-top: -65px;
+          }
+        }
+      }
+
+    }
+
+  }
+
+}
+

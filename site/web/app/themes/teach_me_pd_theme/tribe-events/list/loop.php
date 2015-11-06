@@ -25,10 +25,15 @@ $more = false;
     Did not use list/single-event.php template
 -->
 <div class="row recent-courses tribe-events-loop vcalendar">
-  <?php while(have_posts()): the_post(); ?>
-    <aside class="col-md-4 col-sm-6 course">
+  <?php while(have_posts()): the_post();
+    $providerID = tribe_get_organizer_id( get_the_ID()  )
+//    $output = esc_html( tribe_get_event_meta( tribe_get_organizer_id( $postId ), 'provider_logo', true ) );
+    ?>
+    <aside class="col-lg-4 col-md-5 col-sm-6 course">
       <div class="grid-content clearfix">
-        <?php the_post_thumbnail('courses-grid-thumb', array('class' => 'img-responsive'));?>
+        <a href="<?php the_permalink();?>">
+          <?php the_post_thumbnail('courses-grid-thumb', array('class' => 'img-responsive'));?>
+        </a>
         <div class="bg-overlay">
           <div class="tribe-events-event-cost pull-left">
             <small>Starting at</small>
@@ -42,7 +47,9 @@ $more = false;
             'class'	=> "attachment-$size img-responsive provider-logo",
           );
           $provider_logo =  tribe_get_organizer_logo(get_the_ID());
-          echo wp_get_attachment_image( $provider_logo, $size, false, $args);
+            echo  '<a href="'. get_permalink($providerID).'">'.
+                      wp_get_attachment_image( $provider_logo, $size, false, $args).
+                  '</a>';
           ?>
         </div>
 

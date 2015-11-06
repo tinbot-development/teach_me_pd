@@ -20,6 +20,8 @@ $sage_includes = [
   'lib/titles.php',                // Page titles
   'lib/extras.php',                // Custom functions
   'lib/init-plugins.php',               // Custom jQUery Plugins
+  'lib/init-acf-fields.php',               // Custom ACF Fields
+
 ];
 
 foreach ($sage_includes as $file) {
@@ -145,4 +147,18 @@ function tribe_get_organizer_logo( $postId = null ) {
 
   return apply_filters( 'tribe_get_organizer_email', $output );
 }
+
+
+
+add_filter( 'ajax_query_attachments_args', 'show_users_own_attachments', 1, 1 );
+function show_users_own_attachments( $query )
+{
+  $id = get_current_user_id();
+  if( !current_user_can('manage_options') )
+    $query['author'] = $id;
+  return $query;
+}
+
+
+
 

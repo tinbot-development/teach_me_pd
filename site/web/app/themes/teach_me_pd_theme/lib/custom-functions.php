@@ -9,7 +9,7 @@ function the_event_date_selector() {
   $base_event = (get_field('base_event')) ? get_field('base_event'): $current_event_id;
 
   //Create the Select Box
-  echo '<select id="eventDate" class="select-box-default">';
+  echo '<select id="eventDate" class="jquery-select-desktop form-control">';
   //Include the Base Event on the Dropdown query by Page ID
   $base_post = new WP_Query(array('p' => $base_event,'post_type'=> 'tribe_events'));
   if ( $base_post->have_posts() ) {

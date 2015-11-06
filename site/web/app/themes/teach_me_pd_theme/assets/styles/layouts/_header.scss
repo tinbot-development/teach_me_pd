@@ -89,3 +89,28 @@ and (min-width: $screen-sm){
 
 
 }
+
+/*Mobile Search Bar Styles*/
+@media screen
+and (max-width: $screen-sm-max){
+  body.mobile {
+    header.banner{
+        a.brand{margin: 1em auto;}
+    }
+    .header-search-bar {
+      #tribe-bar-form-custom {
+        position: relative;
+        padding: 0 15px 1em;
+        .search-label {
+          margin-bottom: 12px;
+          display: block;
+        }
+        .icon-search{
+          position: absolute;
+          top: 0;
+          left: 6em;
+        }
+      }
+    }
+  }
+}

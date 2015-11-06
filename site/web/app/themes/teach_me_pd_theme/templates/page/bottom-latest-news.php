@@ -25,7 +25,7 @@ if( $news->have_posts()) : ?>
     ?>
     <aside class="col-md-4">
       <div class="latest-news bg-info">
-        <?php the_post_thumbnail('thumbnail', array('class' => 'img-responsive'));?>
+        <?php the_post_thumbnail('courses-grid-thumb', array('class' => 'img-responsive'));?>
         <h5 class="post-title"><?php the_title(); ?></h5>
         <div class="entry-content">
           <p><?php echo pb_trim_characters(get_the_excerpt(), 105); ?> <a href="<?php the_permalink();?>">More</a></p>

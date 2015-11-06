@@ -1,0 +1,91 @@
+/* Recent Courses Grid*/
+.recent-courses {
+  aside.course {
+    margin-bottom: 30px;
+    .grid-content{
+      background: #fff;
+      border: 1px solid #cecece;
+    }
+    .bg-overlay {
+      background: rgba(102, 102, 102, 0.46);
+      float: left;
+      padding: 10px;
+      position: relative;
+      width: 100%;
+      margin-top: -65px;
+      .tribe-events-event-cost {
+        border-right: 1px solid rgba(245, 245, 245, 0.31);
+        display: block;
+        margin: 0 1em 0 0;
+        padding-right: 4px;
+        > * {
+          color: #ffffff;
+          float: left;
+          width: 100%;
+          text-align: center;
+        }
+        small {
+
+        }
+        span {
+        }
+      }
+
+      a.book-now {
+        color: #fff;
+        float: left;
+        font-size: 20px;
+        line-height: 2em;
+        text-decoration: none;
+      }
+      .provider-logo {
+        float: right;
+        width: 80px;
+        position: absolute;
+        right: 1em;
+      }
+    }
+
+
+    h5 {
+      float: left;
+      margin: 0;
+      padding: 1em;
+      width: 82%;
+      line-height: 1.6em;
+      min-height: 79px;
+    }
+  }
+  @media screen
+  and (max-width: $screen-md-max){
+    aside.course {
+      .grid-content{
+          h5 {
+              min-height: 7em;
+
+          }
+      }
+    }
+  }
+
+
+  @media screen
+  and (max-width: $screen-xs-max){
+    aside.course {
+        .grid-content{
+          .wp-post-image {
+              width: 100%;
+          }
+          .bg-overlay {
+            margin-top: -65px;
+          }
+        }
+      }
+
+  }
+
+}
+
+
+
+

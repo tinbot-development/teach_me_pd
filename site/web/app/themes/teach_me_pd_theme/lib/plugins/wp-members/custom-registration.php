@@ -79,8 +79,8 @@ function wpmem_inc_registration( $toggle = 'new', $heading = '', $redirect_to = 
   if ( $toggle == 'edit' ) {
     // this is the User Profile edit - username is not editable
     $val   = $userdata->user_login;
-    $label = '<label for="username" class="text">' . __( 'Username' ) . '</label>';
-    $input = '<p class="noinput">' . $val . '</p>';
+    $label = '<label for="username" class="text">' . __( 'Username' ) . ' <small>(Note: username is not editable)</small></label>';
+    $input = '<p class="noinput disabled" >' . $val . '</p>';
     $field_before = ( $wrap_inputs ) ? '<div class="div_text">' : '';
     $field_after  = ( $wrap_inputs ) ? '</div>' : '';
   } else {

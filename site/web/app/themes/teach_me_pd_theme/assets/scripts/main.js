@@ -22,6 +22,19 @@
       },
       finalize: function() {
         // JavaScript to be fired on all pages, after page specific JS is fired
+        //$('body').scrollspy({ target: '#providerNavbar' });
+
+        $('#menu-provider-top-nav li a').on('click',function(event){
+              var target = $(this).attr('href');
+              if( target.length ) {
+                event.preventDefault();
+                $('html, body').animate({
+                  scrollTop: $(target).offset().top - 65
+                }, 500);
+
+              }
+        });
+
 
       }
     },

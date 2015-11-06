@@ -40,6 +40,7 @@
           section.upcoming-events-holder {
               .rotate-pos-sm {
                 transform: rotate(10deg);
+                 margin-left: 30px;
               }
 
               #coursesWrapper {
@@ -128,3 +129,20 @@ and (min-width: $screen-sm-max){
 
     }
 }
+
+
+/*Mobile Banner Styles*/
+.home,
+.events-archive{
+  &.mobile{
+    section.home-banner {
+      section.img-slider {
+        height: 420px;
+        margin-bottom: 1em;
+      }
+    }
+  }
+
+}
+
+

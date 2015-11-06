@@ -77,3 +77,31 @@ nav.navbar.navbar-default {
 
 
 }
+
+
+/*Mobile Navigation*/
+@media screen
+and (max-width: $screen-sm-max){
+  body.mobile {
+    .main-nav-holder{
+        padding: 0;
+        .nav {
+          > li {
+            background-color: #636466;
+            color: white;
+            padding: 0 1em;
+            border-bottom: 1px solid;
+            > a {
+              color: white;
+              font-size: 1.1em !important;
+              padding-left: 0 !important;
+            }
+          }
+        }
+        .site-description {
+            padding: 0 15px;
+        }
+    }
+
+  }
+}

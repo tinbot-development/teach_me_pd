@@ -3,16 +3,17 @@
  *  Providers List View
  */
 
-$providers = new WP_User_Query( array( 'role' => 'Provider', 'number' => 30 ) );
+$providers = new WP_Query( array( 'post_type' => 'tribe_provider') );
 
 //var_dump($providers);
 
 // User Loop
-if ( ! empty( $providers->results ) ) {
-  foreach ( $providers->results as $provider ) {
-    $providerID = $provider->ID;
-    $provider_bio = get_user_meta($providerID,'description',true);
-    $tribe_provider_permalink = get_user_meta($providerID,'tribe_provider_permalink', true)
+if (  $providers->have_posts() )  {
+  while ( $providers->have_posts() ) {
+    $providers->the_post();
+    $providerID = get_the_ID();
+    $provider_bio = get_the_content();
+//    $tribe_provider_permalink = get_user_meta($providerID,'tribe_provider_permalink', true)
     ?>
     <section class="row">
       <div class="provider-holder">

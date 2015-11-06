@@ -4,12 +4,13 @@
  */
 $provider = get_queried_object();
 
-$providerName =$provider->post_title;
+$providerName = $provider->post_title;
 $website = get_field('_OrganizerWebsite',$provider->ID);
 $facebook = get_field('facebook',$provider->ID);
 $twitter = get_field('twitter',$provider->ID);
 $instagram = get_field('instagram',$provider->ID);
-$providerAddress = 'Langwarrin, Vic 3910';
+$pinterest = get_field('pinterest',$provider->ID);
+$providerAddress = get_field('address',$provider->ID);
 
 $logo = get_field('provider_logo',$provider->ID);
 $size = 'thumbnail'; // (thumbnail, medium, large, full or custom size)
@@ -29,15 +30,19 @@ $attr = array(
       <div class="col-md-12">
         <div class="icon-logo-holder pull-right-md">
           <ul class="social-media-icons round">
-            <li><a target="_blank" href="<?php echo $facebook?>" class="facebook">Facebook Account</a></li>
-            <li><a target="_blank" href="<?php echo $instagram; ?>" class="instagram">Instagram Account</a></li>
-            <li><a target="_blank" href="<?php echo $twitter; ?>" class="twitter">Twitter Account</a></li>
-            <li class="logo">
-              <a target="_blank" href="<?php echo $website;?>">
-                <?php if( $logo ) {
-                    echo wp_get_attachment_image( $logo, $size, false, $attr);
-                }?>
-              </a></li>
+          <?php
+            echo ($facebook != '') ?'<li><a target="_blank" href="'. $facebook.'" class="facebook">Facebook Account</a></li>':'';
+            echo ($instagram != '') ? '<li><a target="_blank" href="'. $instagram.'" class="instagram">Instagram Account</a></li>':'';
+            echo ($twitter != '') ? '<li><a target="_blank" href="'. $twitter.'" class="twitter">Twitter Account</a></li>':'';
+            echo ($pinterest != '') ? '<li><a target="_blank" href="'. $pinterest.'" class="pinterest">Pinterest Account</a></li>':'';
+
+            if( $logo ) {
+              echo '<li class="logo">
+              <a target="_blank" href="'. $website.'">'.
+                     wp_get_attachment_image( $logo, $size, false, $attr).
+              '</a></li>';
+           }
+           ?>
           </ul>
 
         </div>
@@ -61,9 +66,12 @@ $attr = array(
 </div>
 </section>
 
-<nav class="provider-top-nav hidden-xs">
-  <div class="container">
-    <?php wp_nav_menu( array('menu' => 'Provider Top Nav' )); ?>
+<nav class="provider-top-nav" data-spy="affix" data-offset-top="400">
+  <div id="providerNavbar" class="container">
+    <ul id="menu-provider-top-nav" class="menu nav" role="tablist">
+      <li><a href="#about">About</a></li>
+      <li><a href="#tribe-events-content">Courses</a></li>
+    </ul>
   </div>
 </nav>
 

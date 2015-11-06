@@ -75,13 +75,13 @@ ob_start();
 
 
         echo '</tr>';
-        echo '<tr>';
+//        echo '<tr>';
 
-				echo '<td class="tickets_description">';
-				echo $ticket->description;
-				echo '</td>';
+//				echo '<td class="tickets_description">';
+//				echo $ticket->description;
+//				echo '</td>';
 
-				echo '</tr>';
+//				echo '</tr>';
 			}
 		}
 
@@ -95,9 +95,26 @@ ob_start();
 				</td>
 			</tr>
 			<?php
-		} ?>
+		} else {
+        ?>
+      <tr>
+        <td colspan="4" class="woocommerce add-to-cart test-wootickets">
+          <a class="btn btn-primary btn-disabled" href="#" id="fullyBooked" data-toggle="tooltip" data-placement="right" title="Fully Booked"><?php esc_html_e( 'Book Now', 'tribe-wootickets' );?></a>
+        </td>
+      </tr>
+        <?php
+    }
+
+    ?>
 	</table>
 </form>
+  <script type="text/javascript">
+    jQuery(function ($) {
+      $('#fullyBooked').on("click, hover", function(){
+        $(this).tooltip('show');
+      })
+    })
+  </script>
 
 <?php
 $content = ob_get_clean();

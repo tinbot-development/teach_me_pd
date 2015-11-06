@@ -1,13 +1,13 @@
 /*Upcoming Events Widget*/
 .upcoming-events-widget{
-      background-color: $gray-dark;
+      background-color: #424244;
       padding: 25px;
-      max-height: 343px;
-      height: 343px;
+      max-height: 335px;
+      height: 335px;
       overflow: auto;
       > h3 {
           font-weight: 400;
-          margin: 0 0 .5em 0;
+          margin: 0 0 1em 0;
       }
       ul.list-upcoming-events{
           >li {
@@ -31,6 +31,7 @@
                       margin-bottom: 0;
                       text-transform: uppercase;
                       font-size: 15px;
+                      min-height: 36px;
                   }
                   .provider {
                       font-weight: 400;
@@ -59,6 +60,23 @@
             }
           }
       }
+}
+
+/* Tribe Upcoming Events Widget*/
+
+.tribe-mini-calendar-event {
+    .list-date {
+        background-color: #4bb8cc;
+        border-radius: 50%;
+        padding: 15px;
+        width: 70px;
+        .list-monthname{
+            color: #ffffff;
+        }
+    }
+    .list-info{
+        width: 70%;
+    }
 }
 
 

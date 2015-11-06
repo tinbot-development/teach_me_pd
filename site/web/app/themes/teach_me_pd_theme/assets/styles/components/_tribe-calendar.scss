@@ -41,3 +41,15 @@
   margin: 0;
 }
 
+
+/*Mobile Provider Styles*/
+@media screen
+and (max-width: $screen-sm-max){
+  body.mobile {
+    #tribe-events-footer {
+        ul.tribe-events-sub-nav li a {
+            background: #ffffff;
+        }
+    }
+  }
+}

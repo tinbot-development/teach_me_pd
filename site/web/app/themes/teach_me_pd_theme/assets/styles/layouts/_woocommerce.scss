@@ -1,0 +1,14 @@
+body.woocommerce-page {
+    .woocommerce{
+        form.woocommerce-checkout{
+          .form-row{
+              @extend .form-group;
+              .input-text {
+                 @extend .form-control;
+              }
+          }
+        }
+    }
+
+
+}

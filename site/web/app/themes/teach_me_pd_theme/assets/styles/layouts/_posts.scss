@@ -1,0 +1,135 @@
+body.single{
+  //Tribe Events -  Single
+    &.single-tribe_events{
+        .tribe_events{
+            .left-sidebar{
+                .course-info{
+                    .panel {
+                        margin-bottom: 0;
+                        background-color: #fff;
+                        border-bottom: 0;
+                        border-radius: 0;
+                        box-shadow: none;
+                        &:last-child{
+                            border-bottom: 1px solid $panel-default-border;
+                        }
+                        ul {
+                          padding-left: 15px;
+                        }
+                        //Venue map
+                        &.venue-map{
+                            .panel-body{
+                                padding: 0;
+                            }
+                            .panel-footer {
+                                background: #ffffff;
+                                address {
+                                    margin: 0;
+                                  .tribe-events-gmap { @extend .hidden;}
+                                }
+                            }
+                        }
+                    } //end .panel
+                }
+            }
+        }
+
+      .right-sidebar{
+          h3 {
+              margin-top: 0;
+          }
+      }
+
+        .recent-courses {
+          aside.course {
+            margin-bottom: 30px;
+            .grid-content{
+              background: #fff;
+              border: 1px solid #cecece;
+            }
+            .bg-overlay {
+              background: rgba(102, 102, 102, 0.46);
+              float: left;
+              padding: 10px;
+              position: relative;
+              width: 100%;
+              margin-top: -65px;
+              .tribe-events-event-cost {
+                border-right: 1px solid rgba(245, 245, 245, 0.31);
+                margin: 0 1em 0 0;
+                padding-right: 4px;
+                > * {
+                  color: #ffffff;
+                  float: left;
+                  width: 100%;
+                  text-align: center;
+                }
+                small {
+
+                }
+                span {
+                }
+              }
+
+              a.book-now {
+                color: #fff;
+                float: left;
+                font-size: 20px;
+                line-height: 2em;
+                text-decoration: none;
+              }
+              .provider-logo {
+                float: right;
+                width: 80px;
+                position: absolute;
+                right: 1em;
+              }
+            }
+
+
+            h5 {
+              float: left;
+              margin: 0;
+              padding: 1em;
+              width: 82%;
+              line-height: 1.6em;
+            }
+          }
+
+
+        }
+      /* Provider Upcoming Courses - Bottom Section*/
+      h2.tribe-events-page-title {
+        border-bottom: 1px solid #bdc3c7;
+        font-weight: 500;
+        margin-top: 1em;
+        margin-bottom: 1em !important;
+        padding-bottom: .5em;
+        text-align: left;
+      }
+
+      #tribe-events-footer {
+          @extend .hidden;
+      }
+
+
+
+      @media screen
+      and (max-width: $screen-sm-max){
+          //body.mobile
+          &.mobile{
+            #tribe-events-content{
+              .tribe_events{
+                  div.tribe-events-single-event-description.custom-tribe-events-content.entry-content.description {
+                      padding: 1em 15px;
+                  }
+              }
+            }
+            #tribe-events-content.tribe-events-list{
+                padding: 0 15px !important;
+            }
+          }
+      }
+
+    }
+}
