@@ -58,7 +58,9 @@
             <?php
             while($courses->have_posts()) :
                   $courses->the_post();
+
                   $id = get_the_ID();
+                  //get_post_meta($id,'_EventOrganizer',true);
                   $startdate = get_post_meta($id,'_EventStartDate',true);
                   $month = date("M",strtotime($startdate));
                   $day = date("d",strtotime($startdate));

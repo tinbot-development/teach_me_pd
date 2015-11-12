@@ -21,7 +21,7 @@ $customer_orders = get_posts( apply_filters( 'woocommerce_my_account_my_orders_q
 	'post_status' => array_keys( wc_get_order_statuses() )
 ) ) );
 
-if ( $customer_orders ) : ?>
+//if ( $customer_orders ) : ?>
 
 	<h3><?php echo apply_filters( 'woocommerce_my_account_my_orders_title', __( 'Courses', 'woocommerce' ) ); ?></h3>
   <p>Here are the courses you have booked. The Download certificate link will be available once you have completed your course.</p>
@@ -36,7 +36,7 @@ if ( $customer_orders ) : ?>
 				<th class="order-total"><span class="nobr"><?php _e( 'Total', 'woocommerce' ); ?></span></th>
         <th class="order-hours"><span class="nobr"><?php _e( 'Hours', 'woocommerce' ); ?></span></th>
         <th class="order-download-certificate"><span class="nobr"><?php _e( 'Course Certificate', 'woocommerce' ); ?></span></th>
-				<th class="order-actions">&nbsp;</th>
+				<th class="order-actions">Actions</th>
 			</tr>
 		</thead>
 
@@ -136,8 +136,9 @@ if ( $customer_orders ) : ?>
 					</td>
 				</tr><?php
 			}
+
 		?></tbody>
 
 	</table>
 
-<?php endif; ?>
+<?php //endif; ?>

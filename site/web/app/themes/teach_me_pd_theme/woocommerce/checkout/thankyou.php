@@ -11,7 +11,10 @@ if ( ! defined( 'ABSPATH' ) ) {
 	exit; // Exit if accessed directly
 }
 
-if ( $order ) : ?>
+if ( $order ) :
+
+  notify_provider_new_order($order)
+  ?>
 
 	<?php if ( $order->has_status( 'failed' ) ) : ?>
 

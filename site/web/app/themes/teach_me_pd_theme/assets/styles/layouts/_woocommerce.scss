@@ -10,5 +10,11 @@ body.woocommerce-page {
         }
     }
 
+  /*My Account Page*/
+  &.my-account {
+      .tab-pane{
+          margin: 1em 0;
+      }
+  }
 
 }

@@ -141,3 +141,13 @@ form.provider-registration {
       }
   }
 }
+
+
+/* Teachers Profile Update Form */
+body.register,
+form.teacher-profile
+{
+    .col-md-6:nth-child(odd){
+        clear:left;
+    }
+}

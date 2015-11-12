@@ -9,3 +9,5 @@ require_once('plugins/wp-members/custom-registration.php');
 require_once('plugins/wp-members/user-profile.php');
 /*Ajax Pagination*/
 require_once('plugins/ajax-pagination/ajax-pagination.php');
+
+

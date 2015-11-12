@@ -58,25 +58,48 @@ $get_checkout_url = apply_filters( 'woocommerce_get_checkout_url', WC()->cart->g
 <script type="text/javascript">
   jQuery(document).ready(function($){
 
-    $('#manager_name_field').hide();
-    $('#manager_email_field').hide();
+       //Show fields on document ready
+    if($('input[name="invoice_school"]:checked').val() == 'Invoice My School'){
+        $('#manager_name_field').show(function(){
+          $(this).find('#manager_name').attr('required','required');
+        });
+        $('#manager_email_field').show().show(function(){
+          $(this).find('#manager_name').attr('required','required');
+        });
+      } else {
+        //Hide fields and remove required
+        $('#manager_name_field').hide(function(){
+          $(this).find('#manager_name').removeAttr('required');
+        });
+        $('#manager_email_field').hide(function(){
+          $(this).find('#manager_name').removeAttr('required');
+        });
 
-    $('#invoice_school_field').find('input[name="invoice_school"]').each(function(){
+    }
 
 
-      $(this).on('change', function(){
-
+      //On Change
+      $('input[name="invoice_school"]').on('change', function(){
         var selectedInvoice = $(this).val();
-        console.log( selectedInvoice);
 
           if(selectedInvoice == "Invoice My School"){
-            $('#manager_name_field').show();
-            $('#manager_email_field').show();
+            $('#manager_name_field').show(function(){
+              $(this).find('#manager_name').attr('required','required');
+            });
+            $('#manager_email_field').show(function(){
+              $(this).find('#manager_name').attr('required','required');
+            });
           } else {
-            $('#manager_name_field').hide();
-            $('#manager_email_field').hide();
+            //Hide fields and remove required
+            $('#manager_name_field').hide(function(){
+              $(this).find('#manager_name').removeAttr('required');
+            });
+            $('#manager_email_field').hide(function(){
+              $(this).find('#manager_name').removeAttr('required');
+            });
           }
-      })
-    });
+      });
+
+
   });
 </script>

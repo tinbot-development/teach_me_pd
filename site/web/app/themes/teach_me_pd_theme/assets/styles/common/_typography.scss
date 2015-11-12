@@ -6,6 +6,21 @@
     font-size: $font-size-small;
 }
 
+.text-primary {
+    color: $brand-primary;
+}
+.text-primary-dark {
+  color: $brand-primary-dark;
+}
+
+.text-success {
+    color: $brand-success;
+}
+
+.text-danger {
+    color: $brand-danger;
+}
+
 ul.link-with-separator {
     li {
         border-right: 1px solid;

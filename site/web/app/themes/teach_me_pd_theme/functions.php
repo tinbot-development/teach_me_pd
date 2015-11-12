@@ -21,7 +21,7 @@ $sage_includes = [
   'lib/extras.php',                // Custom functions
   'lib/init-plugins.php',               // Custom jQUery Plugins
   'lib/init-acf-fields.php',               // Custom ACF Fields
-
+  'lib/notification-emails/init.php',               // Email Notifications
 ];
 
 foreach ($sage_includes as $file) {
@@ -160,5 +160,24 @@ function show_users_own_attachments( $query )
 }
 
 
+function get_current_user_role () {
+  global $current_user;
+  get_currentuserinfo();
+  $user_roles = $current_user->roles;
+  $user_role = array_shift($user_roles);
+  return $user_role;
+};
 
 
+if ( !function_exists('tribe_events_count_sold_tickets') ) {
+  function tribe_events_count_sold_tickets ( $event = null ) {
+    $count = 0;
+    if ( null === $event = tribe_events_get_event( $event ) || !class_exists('TribeEventsTickets') ) {
+      return 0;
+    }
+    foreach ( TribeEventsTickets::get_all_event_tickets( $event->ID ) as $ticket ) {
+      $count += get_post_meta( $ticket->ID, 'total_sales', true );
+    }
+    return $count;
+  }
+}
