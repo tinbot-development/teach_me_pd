@@ -8,7 +8,9 @@ set :repo_url, 'git@github.com:tinbot-development/teach_me_pd.git'
 # ask :branch, `git rev-parse --abbrev-ref HEAD`.chomp
 
 # Default deploy_to directory is /var/www/my_app
-set :deploy_to, '/var/www/teachme.tinbotdevelopment.com/htdocs'
+# set :deploy_to, '/var/www/teachme.tinbotdevelopment.com/htdocs'
+set :deploy_to, '/var/www/teachmepd.com.au/'
+
 
 # Default value for :scm is :git
 # set :scm, :git
