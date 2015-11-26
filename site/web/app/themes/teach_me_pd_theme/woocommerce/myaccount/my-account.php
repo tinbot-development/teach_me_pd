@@ -13,8 +13,8 @@ if ( ! defined( 'ABSPATH' ) ) {
 wc_print_notices();
 
 $current_user_role =  get_current_user_role();
-
-    if($current_user_role =='subscriber'){
+/* Subscriber My Account Page*/
+if($current_user_role =='subscriber'){
 ?>
 
 
@@ -66,7 +66,7 @@ $current_user_role =  get_current_user_role();
 
     }
     else if($current_user_role =='provider'){
-
+/* Provider My Account Page*/
       ?>
   <!-- PROVIDER TAB NAVIGATION -->
   <ul class="nav nav-tabs" role="tablist">

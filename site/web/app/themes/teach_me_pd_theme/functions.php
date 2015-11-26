@@ -181,3 +181,30 @@ if ( !function_exists('tribe_events_count_sold_tickets') ) {
     return $count;
   }
 }
+
+
+/* Allow Only One Product Per User Purchase */
+add_filter( 'woocommerce_add_cart_item_data', 'wdm_empty_cart', 10,  3);
+
+function wdm_empty_cart( $cart_item_data, $product_id, $variation_id )
+{
+
+  global $woocommerce;
+  $woocommerce->cart->empty_cart();
+
+  // Do nothing with the data and return
+  return $cart_item_data;
+}
+
+
+add_filter ('add_to_cart_redirect', 'redirect_to_checkout');
+
+function redirect_to_checkout() {
+    global $woocommerce;
+
+    $checkout_url = $woocommerce->cart->get_checkout_url();
+
+    return $checkout_url;
+
+}
+

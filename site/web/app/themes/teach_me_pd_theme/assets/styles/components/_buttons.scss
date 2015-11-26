@@ -1,8 +1,17 @@
-.btn{
+.btn,
+.button {
     border-radius: 0;
     &.btn-disabled{
       background-color: #34495e;
     }
+}
+
+.button-primary{
+    @extend .btn-primary;
+}
+
+.button-large {
+    @extend .btn-lg;
 }
 
 .woocommerce #respond input#submit,

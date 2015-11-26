@@ -5,7 +5,7 @@
 
 $args = array(
   'post_type' => 'tribe_events',
-  'posts_per_page' => 6
+  'posts_per_page' => 15
   );
 $courses = new WP_Query($args);
 
@@ -43,6 +43,7 @@ if($courses->have_posts()) : ?>
             </div>
 
             <h5><?php the_title(); ?></h5>
+            <span class="start-date"><?php echo tribe_get_start_date();?></span>
         </div>
     </aside>
 

@@ -54,6 +54,7 @@ $more = false;
         </div>
 
         <h5><?php the_title(); ?></h5>
+        <span class="start-date"><?php echo tribe_get_start_date();?></span>
       </div>
     </aside>
 

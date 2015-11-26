@@ -23,12 +23,11 @@
 
     <div class="input-container">
       <select name="category" id="category" class="select-box-default">
-        <option selected>Category</option>
         <option value="Arts">The Arts</option>
         <option value="Economics">Economics</option>
         <option value="English">English</option>
         <option value="Geography">Geography</option>
-        <option value="IT">I.T.</option>
+        <option value="ICT">I.C.T.</option>
         <option value="LOTE">LOTE</option>
         <option value="Math">Math</option>
         <option value="Science">Science</option>

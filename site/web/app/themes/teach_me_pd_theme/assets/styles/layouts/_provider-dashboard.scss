@@ -1,0 +1,24 @@
+/* Provider Dashboard Styles */
+body.provider-dashboard  {
+  .filter_column.filter_text{
+    input.text_filter {
+      color: $gray-lighter;
+    }
+  }
+  /*body.acf-post-editor*/
+  &.acf-post-editor {
+    #page-wrapper{
+        background-color: #f1f1f1;
+    }
+      .acf-fields.acf-form-fields{
+          @extend .clearfix;
+      }
+      .acf-form-submit{
+        input.button {
+          border: none;
+        }
+      }
+
+  }
+
+}

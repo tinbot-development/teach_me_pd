@@ -1,4 +1,26 @@
 <?php
+
+// Add PlatformB Logo
+function my_login_logo() { ?>
+  <style type="text/css">
+    .login h1 a {
+      background-image: url(<?php echo get_template_directory_uri(); ?>/assets/images/login.png);
+      background-size: 300px 225px;
+      margin:0 auto;
+      width:300px;
+      height:225px;
+    }
+  </style>
+
+
+<?php }
+add_action( 'login_enqueue_scripts', 'my_login_logo' );
+
+function my_login_logo_url() {
+  return "http://www.platformb.com.au";
+}
+add_filter( 'login_headerurl', 'my_login_logo_url' );
+
 /**
  *  Echo the Event Date Selector
  * Query all Events having the same base_event then show date with link.
@@ -203,3 +225,15 @@ if(!function_exists('pb_errors')) {
     return isset($wp_error) ? $wp_error : ($wp_error = new WP_Error(null, null, null));
   }
 }
+
+
+
+
+//add_filter( 'woocommerce_add_cart_item_data', 'woo_custom_add_to_cart' );
+//
+//function woo_custom_add_to_cart( $cart_item_data ) {
+//  global $woocommerce;
+//  $woocommerce->cart->empty_cart();
+//
+//  return $cart_item_data;
+//}

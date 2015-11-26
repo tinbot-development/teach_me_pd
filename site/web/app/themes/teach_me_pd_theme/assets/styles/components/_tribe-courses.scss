@@ -18,6 +18,8 @@
         display: block;
         margin: 0 1em 0 0;
         padding-right: 4px;
+        width: 30%;
+
         > * {
           color: #ffffff;
           float: left;
@@ -43,6 +45,8 @@
         width: 80px;
         position: absolute;
         right: 1em;
+        box-shadow: 0 5px 10px #999;
+        border-radius: 50%;
       }
     }
 
@@ -50,11 +54,16 @@
     h5 {
       float: left;
       margin: 0;
-      padding: 1em;
-      width: 82%;
+      padding: 2em 1em 1em;
+      width: 100%;
       line-height: 1.6em;
-      min-height: 79px;
+      min-height: 117px;
     }
+    span.start-date {
+      padding: 0 1em 1em;
+      display: block;
+    }
+
   }
   @media screen
   and (max-width: $screen-md-max){
@@ -62,7 +71,6 @@
       .grid-content{
           h5 {
               min-height: 7em;
-
           }
       }
     }

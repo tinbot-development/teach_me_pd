@@ -151,3 +151,27 @@ form.teacher-profile
         clear:left;
     }
 }
+
+
+
+/* Login Form */
+
+body.page {
+  form#loginform {
+      @extend .row;
+      > p {
+          @extend .form-group;
+          @extend .col-md-10;
+          > input.input {
+              @extend .form-control;
+          }
+
+          >input.button-primary {
+              @extend .btn;
+              @extend .btn-primary;
+              @extend .btn-lg;
+              width: 100%;
+          }
+      }
+  }
+}

@@ -12,8 +12,10 @@ if ( ! defined( 'ABSPATH' ) ) {
 }
 
 if ( $order ) :
-
-  notify_provider_new_order($order)
+  //Send Email to provider
+  notify_provider_new_order($order);
+  //Save New Course Attendee
+  Attendees_Management::add_new_course_attendee($order);
   ?>
 
 	<?php if ( $order->has_status( 'failed' ) ) : ?>
