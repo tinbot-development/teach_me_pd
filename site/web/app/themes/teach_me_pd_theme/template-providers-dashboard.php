@@ -14,12 +14,23 @@ switch ($action){
   case 'all_courses':
           get_template_part('templates/provider/dashboard/courses','all');
         break;
-  case 'view_attendees':
-          get_template_part('templates/provider/dashboard/course-single','attendees');
-        break;
   case 'new_course':
           get_template_part('templates/provider/dashboard/course','new');
         break;
+  case 'edit_course':
+          get_template_part('templates/provider/dashboard/course','edit');
+        break;
+  case 'view_attendees':
+          get_template_part('templates/provider/dashboard/course-single','attendees');
+        break;
+  case 'edit_profile':
+          echo '<h2 class="text-center">Edit Profile</h2>';
+          echo do_shortcode('[provider_profile_edit_form]'); //Echo Provider Edit Profile Form from Custom Providers Management Plugin
+        break;
+  case 'change_password':
+      echo do_shortcode('[password_form]');
+      break;
+
   default:
       get_template_part('templates/provider/dashboard/welcome');
 

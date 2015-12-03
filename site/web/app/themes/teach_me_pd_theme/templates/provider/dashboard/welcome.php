@@ -21,7 +21,7 @@ Welcome <?php echo $user_fullname;?>
         <h3 class="panel-title"><i class="fa fa-money fa-fw"></i>My Courses</h3>
       </div>
       <div class="panel-body">
-        <?php  echo do_shortcode('[provider_display_all_attendees]');?>
+        <?php  echo do_shortcode('[provider_display_all_courses]');?>
         <div class="text-right">
           <a href="#">View All Transactions <i class="fa fa-arrow-circle-right"></i></a>
         </div>
