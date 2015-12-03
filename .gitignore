@@ -34,3 +34,9 @@ node_modules
 # Vagrant
 bin
 .vagrant
+.idea/.name
+.idea/misc.xml
+.idea/modules.xml
+.idea/teach_me_pd.iml
+.idea/vcs.xml
+.idea/workspace.xml
