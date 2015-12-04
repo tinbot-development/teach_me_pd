@@ -3,10 +3,7 @@
  * Frontend Course Edit page
  */
 
-if (class_exists('Tribe__Events__Tickets__Woo__Main')) {
-  remove_action( 'tribe_events_single_event_after_the_meta', array( Tribe__Events__Tickets__Woo__Main::get_instance(), 'front_end_tickets_form'), 5 );
-  add_action( 'tribe_events_single_event_before_the_content', array( Tribe__Events__Tickets__Woo__Main::get_instance(), 'front_end_tickets_form') );
-}
+
  ?>
 <section class="row">
   <div class="col-md-10">
